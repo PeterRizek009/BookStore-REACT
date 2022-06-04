@@ -1,0 +1,18 @@
+
+  .signIn{
+      margin: 200px auto;
+   
+  }
+
+  .myform {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   
+   
+  }
+  
+  .myform input {
+    min-width: 400px;
+  }
+  

@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.product-details {
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+}
+.product-details h2 {
+  color: #5189ac;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.product-details h2 b {
+  color: #08023d;
+}
+body {
+  background: #eee;
+}
+
+.cart {
+  background: #fff;
+}
+
+.p-about {
+  font-size: 12px;
+}
+
+.table-shadow {
+  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+}
+
+.items {
+  box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
+}
+
+.spec {
+  font-size: 10px;
+ 
+}
+
+.spec button{
+  width: 25px;
+  height: 35px;
+  border: 1px solid #eee;
+}
+.spec button i{
+  font-size: 8px;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.delete{
+  cursor: pointer;
+  font-size: 18px;
+  color: #02385a;
+  transition: 0.2s color ease-in-out;
+}
+.delete span{
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+.delete:hover{
+  color: #f19500;
+}

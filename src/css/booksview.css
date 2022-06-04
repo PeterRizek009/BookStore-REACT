@@ -1,0 +1,59 @@
+/* start of science  */
+.Scicence-books {
+    background-color: rgb(235, 235, 235);
+  }
+  .Scicence-books .sci-books {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0 140px;
+  }
+  
+  .Scicence-books .book {
+    padding: 0 8px;
+    text-align: center;
+    transition: 0.2s display ease-in-out;
+  }
+  
+  .Scicence-books .book img {
+    border: 2px solid #08023d;
+    padding: 4px;
+    max-width: 160px;
+    cursor: pointer;
+    transition: 0.2s transform ease-in-out;
+  }
+  
+  .Scicence-books .book img:hover {
+    transform: scale(1.02);
+    opacity: 0.2;
+  }
+  
+  .Scicence-books .book .thumb-content {
+    margin-top: 5px;
+  }
+  .Scicence-books .book .thumb-content h4 {
+    color: #457b9d;
+    font-family: "Sansita Swashed", cursive;
+  }
+  .Scicence-books .book .thumb-content .item-price strike {
+    color: #313335;
+  }
+  .Scicence-books .book .thumb-content .item-price span {
+    color: #00b90f;
+  }
+  
+
+  @media screen and (max-width: 992px) {
+    .Scicence-books .sci-books {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+  }
+  
+  /* end of science  */
+  

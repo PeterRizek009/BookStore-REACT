@@ -1,0 +1,84 @@
+{
+  "Books": [
+    {
+      "id": "1",
+      "name": "Book1",
+      "price": "5$",
+      "isInCart": false,
+      "url": "../src/images/Books/2.jpg",
+      "count": 0
+    },
+    {
+      "id": "2",
+      "name": "Book2",
+      "price": "5$",
+      "isInCart": false,
+      "url": "../src/images/Books/book4.jpg",
+      "count": 0
+    },
+    {
+      "id": "3",
+      "name": "Egypt History",
+      "price": "5$",
+      "isInCart": false,
+      "url": "../src/images/Books/book1.svg",
+      "count": 0
+    },
+    {
+      "id": "4",
+      "name": "Science",
+      "price": "5$",
+      "isInCart": false,
+      "url": "../src/images/Books/book1.svg",
+      "count": 0
+    },
+    {
+      "id": "5",
+      "name": "Economy",
+      "price": "5$",
+      "isInCart": false,
+      "url": "../src/images/Books/book1.svg",
+      "count": 0
+    },
+    {
+      "id": "6",
+      "name": "Gold investment ",
+      "price": "5$",
+      "isInCart": false,
+      "url": "../src/images/Books/book1.svg",
+      "count": 0
+    },
+    {
+      "id": "7",
+      "name": "Stock markets ",
+      "price": "5$",
+      "isInCart": false,
+      "url": "../src/images/Books/book1.svg",
+      "count": 0
+    },
+    {
+      "id": "8",
+      "name": "Novel",
+      "price": "8$",
+      "isInCart": false,
+      "url": "../src/images/Books/book1.svg",
+      "count": 0
+    },
+    {
+      "id": "9",
+      "name": "Novel3",
+      "price": "8$",
+      "isInCart": false,
+      "url": "../src/images/Books/book1.svg",
+      "count": 0
+    },
+    {
+      "id": "10",
+      "name": "Novel2",
+      "price": "8$",
+      "isInCart": false,
+      "url": "../src/images/Books/book4.jpg",
+      "count": 0
+    }
+  ]
+}
