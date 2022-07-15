@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+}
+.title h2 {
+  color: #5189ac;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.title h2 b {
+  color: #08023d;
+}
+
+form {
+  margin: 100px auto 0 auto;
+}

@@ -7,7 +7,7 @@ import {
   faCircleUser,
 } from "@fortawesome/free-solid-svg-icons";
 import MenuItems from "./MenuItems"
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 

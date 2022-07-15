@@ -3,6 +3,7 @@ import Header from './header';
 import AllBooks from './allbooks';
 import axios from 'axios';
 import BooksView from './booksview';
+import AboutUs from './aboutus';
 
 class HomePage extends Component {
     state = {
@@ -26,6 +27,7 @@ class HomePage extends Component {
                 <Header />
                 <AllBooks books={this.state.books}/>
                 <BooksView books={this.state.books}/>
+                <AboutUs/>
             </React.Fragment>);
     }
 }

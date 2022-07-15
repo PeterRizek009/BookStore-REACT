@@ -47,9 +47,7 @@ class AllBooks extends Component {
  
   render() {
     const { books , onSave } = this.props;
-    
-
-    return (
+   return (
       <div>
         <section className="books">
           <div className="container" id="novels">

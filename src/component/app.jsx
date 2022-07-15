@@ -11,6 +11,9 @@ import BookDetails from './bookdetails';
 import ShoppingCart from './shoppingcart';
 import axios from 'axios';
 import Admin from './admin';
+import AddNewItem from './addnewitem';
+import Books from '../db.json'
+
 
 
 class App extends Component {
@@ -20,11 +23,13 @@ class App extends Component {
         isActive: false,
     }
 
-    async componentDidMount() {
-        let { data } = await axios.get("http://localhost:3004/Books/");
-        // set state
-        this.setState({ books: data });
-    }
+     async componentDidMount() {
+         let { data } = await axios.get("http://localhost:3004/Books/");
+         // set state
+         console.log(data);
+         this.setState({ books: data });
+     }
+
 
     onCart = (book) => {
         //clone
@@ -33,7 +38,7 @@ class App extends Component {
 
         //edit
         books[index].isInCart = true;
-        
+
         //
         this.setState({ books });
         this.handleSubmit(index);
@@ -45,7 +50,7 @@ class App extends Component {
         const book = { ...this.state.books[index] }
         //edit
         try {
-            await axios.patch("http://localhost:3004/Books/"+(index), book);
+            await axios.patch("http://localhost:3004/Books/" + (index), book);
         }
         catch (error) {
             alert("Cannot change item data");
@@ -58,9 +63,9 @@ class App extends Component {
         const books = [...this.state.books];
         const index = books.indexOf(book);
         //edit
-        books[index].isInCart =false;
+        books[index].isInCart = false;
         const RemovedBook = { ...this.state.books[index] }
-        this.setState({ books });  
+        this.setState({ books });
         try {
             await axios.patch("http://localhost:3004/Books/" + (index), RemovedBook);
         }
@@ -113,14 +118,14 @@ class App extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar/>
+                <Navbar />
                 <main>
                     <Routes>
-                        <Route path="/" element={<HomePage onSave={this.onCart}  />} />
+                        <Route path="/" element={<HomePage onSave={this.onCart} />} />
                         <Route path="/app" element={<HomePage onSave={this.onCart} />} />
-                        <Route path="/aboutus" element={<AboutUs />} />
                         <Route path="/signin" element={<SignIn />} />
                         <Route path="/admin" element={<Admin books={this.state.books} onDelete={this.handleDelete} />} />
+                        <Route path="/admin/addnewitem" element={<AddNewItem books={this.state.books} />} />
                         <Route path="/bookdetails/:id" element={<BookDetails books={this.state.books} onSave={this.onCart} />} />
                         <Route path="/shoppingcart" element={<ShoppingCart books={this.state.books} onSave={this.onCart} onIncrement={this.handleIncrement}
                             onDecrement={this.handleDecrement} onDelete={this.handleRemoveItem} />} />
