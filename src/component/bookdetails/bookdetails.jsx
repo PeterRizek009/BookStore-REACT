@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import images from "../images.js";
+import { useParams } from 'react-router-dom';
+import images from './../../images';
 
 
-
-
-const BookDetails = props => {
+const BookDetails = ({ onSave , books}) => {
 
     const { id } = useParams();
-    const { onSave } = props;
-    const book = props.books.filter(element => (element.id === id))[0];
+     
+
+    const book = books.filter(element => (element.id === id))[0];
 
     const imageStyle = {
         width: "250px",

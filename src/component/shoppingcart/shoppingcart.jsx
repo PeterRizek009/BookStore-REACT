@@ -1,10 +1,10 @@
 import React from "react";
-import "../css/shoppingcart.css";
-import images from "../images";
+import "./shoppingcart.css";
+import images from './../../images';
 
-const ShoppingCart = (props) => {
-  const { onIncrement, onDecrement, books, onDelete } = props;
-  const cartBooks = props.books.filter((element) => element.isInCart === true);
+const ShoppingCart = ({ onIncrement, onDecrement, books, onDelete }) => {
+
+  const cartBooks = books.filter((element) => element.isInCart === true);
 
   return (
     <React.Fragment>

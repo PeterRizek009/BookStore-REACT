@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "../css/addnewitem.css";
+import "./addnewitem.css";
 
 
 class AddNewItem extends Component {
@@ -36,7 +36,7 @@ class AddNewItem extends Component {
         e.preventDefault();
         //Call Backend
         const obj = {...this.state,count: 0};
-        await axios.post("http://localhost:3004/Books/", obj);
+        await axios.post("https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books", obj);
         console.log("Book added");
     };
 

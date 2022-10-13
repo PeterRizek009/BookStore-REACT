@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./admin.css"
 
-const Admin = props => {
+const Admin = ({ books  ,onDelete }) => {
 
-    const { books  ,onDelete } = props;
     return (
         <React.Fragment>
             <h1>admin Dashboard</h1>

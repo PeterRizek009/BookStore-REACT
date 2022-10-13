@@ -33,7 +33,7 @@
   
    .aboutus-bg{
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-    url(../images/aboutusbg.jpg);
+    url(./../../images/aboutusbg.jpg);
    }
   @media (min-width: 992px) {
     .rounded-lg-3 { border-radius: .3rem; }
