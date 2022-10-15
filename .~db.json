@@ -12,17 +12,17 @@
       "id": "4",
       "name": "Economy",
       "price": "5$",
-      "isInCart": false,
+      "isInCart": true,
       "url": "../src/images/Books/book1.svg",
-      "count": 0
+      "count": 4
     },
     {
       "id": "5",
       "name": "Economy",
       "price": "5$",
-      "isInCart": false,
+      "isInCart": true,
       "url": "../src/images/Books/book1.svg",
-      "count": 0
+      "count": 1
     },
     {
       "id": "6",
@@ -30,39 +30,39 @@
       "price": "5$",
       "isInCart": true,
       "url": "../src/images/Books/book1.svg",
-      "count": 0
+      "count": 1
     },
     {
       "id": "8",
       "name": "Economy",
       "price": "5$",
-      "isInCart": false,
+      "isInCart": true,
       "url": "../src/images/Books/book1.svg",
-      "count": 0
+      "count": 1
     },
     {
       "id": "9",
       "name": "Economy",
       "price": "5$",
-      "isInCart": false,
+      "isInCart": true,
       "url": "../src/images/Books/book1.svg",
-      "count": 0
+      "count": 2
     },
     {
       "id": "10",
       "name": "Novel2",
       "price": "8$",
-      "isInCart": false,
+      "isInCart": true,
       "url": "../src/images/Books/book4.jpg",
-      "count": 0
+      "count": 1
     },
     {
       "id": "1",
-      "name": "Novel2",
-      "price": "8$",
+      "name": "Economy",
+      "price": "5$",
       "count": 0,
       "isInCart": false,
-      "url": "../src/images/Books/book4.jpg"
+      "url": "../src/images/Books/book1.svg"
     },
     {
       "id": "2",

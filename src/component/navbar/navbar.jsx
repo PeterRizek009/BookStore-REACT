@@ -1,11 +1,14 @@
-import {React , useState} from "react";
+import { React } from "react";
 import { NavLink, Link } from 'react-router-dom';
 import NavTop from "./navtop";
 import './navbar.css'
 
-const Navbar = ({books}) => {
-  
+const Navbar = ({ books }) => {
+
+ 
   const cartBooks = books.filter((element) => element.isInCart === true);
+ 
+
 
   return (<>
     <NavTop />
@@ -14,9 +17,9 @@ const Navbar = ({books}) => {
         <Link className="navbar-brand text-danger logo h1 align-self-center" to={"/"}>
           Books<span className="text-black">Shop</span>
         </Link>
-        
+
         <div className="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <i className="fas fa-bars-staggered"></i>
         </div>
 

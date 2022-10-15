@@ -5,9 +5,9 @@ import images from './../../images';
 const ShoppingCart = ({ onIncrement, onDecrement, books, onDelete }) => {
 
   const cartBooks = books.filter((element) => element.isInCart === true);
-
+  
   return (
-    <React.Fragment>
+    <>
       <div className="container mt-5 p-3 rounded cart">
         <div className="row no-gutters">
           <div className="col-md-8">
@@ -61,7 +61,7 @@ const ShoppingCart = ({ onIncrement, onDecrement, books, onDelete }) => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
