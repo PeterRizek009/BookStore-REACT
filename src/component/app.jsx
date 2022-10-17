@@ -9,6 +9,7 @@ import HomePage from "./homepage/homepage";
 import SignIn from "./signin/signin";
 import Navbar from "./navbar/navbar";
 import Books from "./db"
+import AllBooks from "./allbooks/allbooks";
 
 const App = () => {
 
@@ -135,6 +136,10 @@ const App = () => {
           <Route
             path="/admin"
             element={<Admin books={books} onDelete={handleDelete} />}
+          />
+            <Route
+            path="/allbooks"
+            element={<AllBooks books={books} />}
           />
           <Route
             path="/admin/addnewitem"

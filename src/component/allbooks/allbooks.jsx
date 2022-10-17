@@ -1,118 +1,83 @@
-import React from "react";
-import "../header/header.css";
-import images from './../../images';
-import { Link } from "react-router-dom";
+import React from 'react'
 import './allbooks.css'
 
+const AllBooks = () => {
 
-const AllBooks = ({ books, onSave }) => {
+    const BooksNameOptions = [
+        {
 
-  const createStars = () => {
-    let stars = [];
-    let randomNumber = Math.floor(Math.random() * 4 + 1);
-    for (let i = 0; i < randomNumber; i++) {
-      stars.push(
-        <li className="list-inline-item">
-          <i className="fa fa-star"></i>
-        </li>
-      );
-    }
-    return stars;
-  };
+            value: "Economy",
+            text: "Economics Books"
+        },
+        {
 
-  const carouselControl = () => {
-    return (
-      <>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#BooksCarousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon"></span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#BooksCarousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon"></span>
-        </button>
-      </>
+            value: "Politic Book",
+            text: "Politics"
+        },
+        {
+
+            value: "Religion",
+            text: "Releigion"
+        },
+        {
+            value: "Novels",
+            text: "Novels"
+        },
+        {
+
+            value: "Tech",
+            text: "Tech"
+        }
+    ]
+
+    const priceOptions = [
+        {
+
+            value: 5,
+            text: "0 - 5$"
+        },
+        {
+
+            value:  10,
+            text: "5$ - 10$"
+        },
+        {
+
+            value: 20,
+            text: "10$ - 20$"
+        }
+    ]
+
+    return (<>
+        <section className="module-small mt-5">
+            <div className="container">
+                <form className="row mx-auto">
+                    <div className="col-sm-4 mb-3">
+                        <select className="form-control">
+                            <option selected="selected">Books Section</option>
+                            {BooksNameOptions.map((option) => {
+                                return <option key={option.value} defaultValue={option.value}>
+                                    {option.text}</option>
+                            })}
+                        </select>
+                    </div>
+                    <div className="col-sm-4 mb-3">
+                        <select className="form-control">
+                            <option  selected="selected">Price</option>
+                            {priceOptions.map((option) => {
+                                return <option key={option.value} defaultValue={option.value}>
+                                    {option.text}</option>
+                            })}
+                        </select>
+                    </div>
+                    <div className="col-sm-4 mb-3">
+                        <button className="btn btn-danger btn-round btn-g" type="submit">Apply</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </>
     );
-  };
-
-
-  const createSlide = (a, b) => {
-    return (
-      (books.slice(a, b)).map((book) => (
-        <div className="col-sm-3" key={book.id}>
-          <div className="thumb-wrapper">
-            <Link to={`/bookdetails/${book.id}`}>
-              <div className="img-box">
-                <img src={images[(book.id - 1)]} alt="image" />
-              </div>
-            </Link>
-            <div className="thumb-content">
-              <h4>{book.name}</h4>
-              <p className="item-price">
-                <strike>{book.price}</strike>
-                <span>50%</span>
-              </p>
-              <div className="star-rating">
-                <ul className="list-inline">
-                  {createStars()}
-                </ul>
-              </div>
-              <button className="btn btn-primary" onClick={() => onSave(book)}>
-                Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-      ))
-    )
-  }
-  return (
-    <div>
-      <section className="books">
-        <div className="container" id="novels">
-          <div className="row">
-            <div className="col-md-12  mx-auto">
-              <h2>
-                NEW  <b>Books</b>
-              </h2>
-              <div
-                id="BooksCarousel"
-                className="carousel slide"
-                data-bs-ride="BooksCarousel"
-              >
-                <div className="carousel-inner">
-
-                  <div className="carousel-item active">
-                    <div className="row" >
-                      {createSlide(0, 4)}
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="row">
-                      {createSlide(5, 9)}
-                    </div>
-                  </div>
-
-                </div>
-                <div>{carouselControl()}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
 }
-
-
-
 
 export default AllBooks;

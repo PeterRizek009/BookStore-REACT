@@ -1,85 +1,84 @@
+import images from "../images";
+
 const Books =  [
       {
-        "id": "3",
+        "id": "1",
         "name": "Stock markets ",
         "price": "5$",
         "isInCart": false,
-        "url": "../src/images/Books/book1.svg",
         "count": 0
       },
       {
-        "id": "4",
+        "id": "2",
         "name": "Economy",
         "price": "5$",
         "isInCart": true,
-        "url": "../src/images/Books/book1.svg",
         "count": 4
+      },
+      {
+        "id": "3",
+        "name": "Economy",
+        "price": "5$",
+        "isInCart": true,
+        "count": 1
+      },
+      {
+        "id": "4",
+        "name": "Stock markets ",
+        "price": "5$",
+        "isInCart": true,
+        "count": 1
       },
       {
         "id": "5",
         "name": "Economy",
         "price": "5$",
         "isInCart": true,
-        "url": "../src/images/Books/book1.svg",
         "count": 1
       },
       {
         "id": "6",
-        "name": "Stock markets ",
+        "name": "Economy",
         "price": "5$",
         "isInCart": true,
-        "url": "../src/images/Books/book1.svg",
+        "count": 2
+      },
+      {
+        "id": "7",
+        "name": "Novel2",
+        "price": "8$",
+        "isInCart": true,
         "count": 1
       },
       {
         "id": "8",
         "name": "Economy",
         "price": "5$",
-        "isInCart": true,
-        "url": "../src/images/Books/book1.svg",
-        "count": 1
+        "count": 0,
+        "isInCart": false
       },
       {
         "id": "9",
-        "name": "Economy",
+        "name": "Tech",
         "price": "5$",
-        "isInCart": true,
-        "url": "../src/images/Books/book1.svg",
-        "count": 2
+        "count": 0,
+        "isInCart": false
       },
       {
         "id": "10",
-        "name": "Novel2",
-        "price": "8$",
-        "isInCart": true,
-        "url": "../src/images/Books/book4.jpg",
-        "count": 1
-      },
-      {
-        "id": "1",
-        "name": "Economy",
-        "price": "5$",
-        "count": 0,
-        "isInCart": false,
-        "url": "../src/images/Books/book1.svg"
-      },
-      {
-        "id": "2",
-        "name": "Economy",
-        "price": "5$",
-        "count": 0,
-        "isInCart": false,
-        "url": "../src/images/Books/book1.svg"
-      },
-      {
-        "id": "15",
-        "name": "book",
+        "name": "Religion",
         "price": "20",
         "count": 0
       },
       {
-        "id": "22",
-        "name": "milk",
+        "id": "11",
+        "name": "Politic",
+        "price": "10",
+        "count": 0
+      },
+      {
+        "id": "12",
+        "name": "Novels",
         "price": "10",
         "count": 0
       }
