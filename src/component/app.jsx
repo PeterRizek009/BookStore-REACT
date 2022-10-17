@@ -8,28 +8,33 @@ import BookDetails from "./bookdetails/bookdetails";
 import HomePage from "./homepage/homepage";
 import SignIn from "./signin/signin";
 import Navbar from "./navbar/navbar";
+import Books from "./db"
 
 const App = () => {
 
-  const [books, setBooks] = useState([{}]);
+  const [books, setBooks] = useState([]);
 
-  const getData = async () => {
-    await axios
-      .get(
-        `http://localhost:3004/Books/`
-      )
-      .then((response) => {
-        setBooks(response.data);
-      })
-      .catch((err) => console.log(err));
-  };
+  // const getData = async () => {
+  //   await axios
+  //     .get(
+  //       `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/db`
+  //     )
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       setBooks(Books);
+       
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      getData();
+      setBooks(Books);
+      console.log(Books);
     }, 1200);
     return () => clearTimeout(timeout)
   }, []);
+ 
 
   const onCart = (book) => {
      //Clone
@@ -37,26 +42,24 @@ const App = () => {
     //edit
      book.isInCart = true;
      book.count++;
-   
-
     setBooks([...books],books);
-    console.log(books);
+    
    handleSubmit(book);
   };
   
   const handleSubmit = async (book) => {
-    //clone
+      console.log(book);
     
    
     //edit
     try {
       await axios.patch(
-        `http://localhost:3004/Books/`+(book.id), book);
+        `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/`+book.id, book);
         
     } catch (error) {
       alert("Cannot change item data");
     }
-    console.log("done");
+    
   };
 
   const handleRemoveItem = async (book) => {
@@ -66,14 +69,14 @@ const App = () => {
     books[index].isInCart = false;
     const RemovedBook = [ ...books[index] ];
     setBooks(books);
-    try {
-      await axios.patch(
-        `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/`+index,
-        RemovedBook
-      );
-    } catch (error) {
-      alert("Cannot delete item from Cart");
-    }
+    // try {
+    //   await axios.patch(
+    //     `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/`+index,
+    //     RemovedBook
+    //   );
+    // } catch (error) {
+    //   alert("Cannot delete item from Cart");
+    // }
   };
 
   const handleDelete = async (book) => {
@@ -83,21 +86,21 @@ const App = () => {
     //edit
     const newbooks = books.filter((p) => p.id !== books.id);
     //set state
-    setBooks({ oldbooks: newbooks });
-    try {
-      await axios.delete(
-        `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/` +
-        books.id
-      );
-    } catch (error) {
-      alert("Cannot delete item");
-      setBooks({ books: oldbooks });
-    }
+    setBooks(newbooks);
+    // try {
+    //   await axios.delete(
+    //     `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/` +
+    //     books.id
+    //   );
+    // } catch (error) {
+    //   alert("Cannot delete item");
+    //   setBooks({ books: oldbooks });
+    // }
   };
 
   const handleIncrement = (book) => {
     const index = books.indexOf(book);
-    books[index] = { ...books[index] };
+    
     //edit
     books[index].count++;
     //
@@ -105,13 +108,14 @@ const App = () => {
   };
 
   const handleDecrement = (book) => {
-    const index = books.indexOf(book);
-    books[index] = { ...books[index] };
+    console.log(book);
+    // const index = books.indexOf(book);
+    // books[index] = { ...books[index] };
     //edit
-    if (books[index].count >= 1) {
-      books[index].count--;
+    if (book.count >= 1) {
+      book.count--;
     } else {
-      alert("Error");
+      alert("the count cannot be less than one item");
     }
     //
     setBooks(books);

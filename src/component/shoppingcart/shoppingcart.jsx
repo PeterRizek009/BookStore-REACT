@@ -1,10 +1,18 @@
-import React from "react";
+import React , {useState , useEffect} from "react";
 import "./shoppingcart.css";
 import images from './../../images';
+import Books from "../db";
 
-const ShoppingCart = ({ onIncrement, onDecrement, books, onDelete }) => {
+const ShoppingCart = ({ onIncrement, onDecrement , onDelete }) => {
+    
+   const [cartBook , setCartBook] = useState([])
 
-  const cartBooks = books.filter((element) => element.isInCart === true);
+  useEffect(() => {
+    const cartBooks = Books.filter((element) => element.isInCart === true);
+    setCartBook(cartBooks)
+  } , [cartBook])
+
+ 
   
   return (
     <>
@@ -13,8 +21,8 @@ const ShoppingCart = ({ onIncrement, onDecrement, books, onDelete }) => {
           <div className="col-md-8">
             <div className="product-details mb-3">
               <h2>Shopping<b>Cart</b></h2>
-              <h2>{`Cart(${cartBooks.length})`}</h2>
-              {cartBooks.map((book) => (
+              <h2>{`Cart(${cartBook.length})`}</h2>
+              {cartBook.map((book) => (
                 <div className="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
                   <div className="d-flex flex-row" key={book.id}>
                     <img className="rounded" src={images[book.id]} width={60} />

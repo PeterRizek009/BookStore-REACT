@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import images from './../../images';
 
 const BooksView = ({ books }) => {
-
+  
     return (
         <section className="Scicence-books">
             <div className="b-example-divider" />

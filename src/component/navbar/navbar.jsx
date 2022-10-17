@@ -1,13 +1,19 @@
-import { React } from "react";
+import  React , { useState , useEffect} from "react";
 import { NavLink, Link } from 'react-router-dom';
 import NavTop from "./navtop";
 import './navbar.css'
+import Books from "../db";
 
-const Navbar = ({ books }) => {
 
- 
-  const cartBooks = books.filter((element) => element.isInCart === true);
- 
+const Navbar = () => {
+
+  const [cartnum , setCartNum] = useState([])
+
+  
+  useEffect(() => {
+    const cartBooks = Books.filter((element) => element.isInCart === true);
+    setCartNum(cartBooks)
+  } , [cartnum])
 
 
   return (<>
@@ -15,7 +21,7 @@ const Navbar = ({ books }) => {
     <nav className="navbar navbar-expand-lg navbar-light shadow">
       <div className="container d-flex justify-content-between align-items-center">
         <Link className="navbar-brand text-danger logo h1 align-self-center" to={"/"}>
-          Books<span className="text-black">Shop</span>
+          ALEX<span className="text-black">BookShop</span>
         </Link>
 
         <div className="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -51,7 +57,7 @@ const Navbar = ({ books }) => {
           <div className="navbar align-self-center d-flex d-sm-inline-flex mt-lg-0 mt-sm-2">
             <NavLink className="nav-icon position-relative text-decoration-none" to={'./shoppingcart'}>
               <i className="fa fa-fw fa-cart-arrow-down text-dark" />
-              <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{cartBooks.length}</span>
+              <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{cartnum.length}</span>
             </NavLink>
             <NavLink className="nav-icon position-relative text-decoration-none mx-5" to={"./signin"}>
               <i className="fa fa-fw fa-user text-dark mr-3" />

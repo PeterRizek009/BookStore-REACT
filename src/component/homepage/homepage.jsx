@@ -5,12 +5,12 @@ import Header from './../header/header';
 import AboutUs from './../aboutus/aboutus';
 
 
-const HomePage = ({books}) => {
+const HomePage = ({books , onSave}) => {
     return(
         <>
         <Header />  
-        <AllBooks books={books} />
-        <BooksView books={books} />
+        <AllBooks books={books} onSave={onSave}/>
+        <BooksView books={books}  />
         <AboutUs />
         </>
     )
