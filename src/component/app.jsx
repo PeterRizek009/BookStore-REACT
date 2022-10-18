@@ -23,7 +23,7 @@ const App = () => {
   //     .then((response) => {
   //       console.log(response.data);
   //       setBooks(Books);
-       
+
   //     })
   //     .catch((err) => console.log(err));
   // };
@@ -35,32 +35,32 @@ const App = () => {
     }, 1200);
     return () => clearTimeout(timeout)
   }, []);
- 
+
 
   const onCart = (book) => {
-     //Clone
-     const index = books.indexOf(book);
+    //Clone
+    const index = books.indexOf(book);
     //edit
-     book.isInCart = true;
-     book.count++;
-    setBooks([...books],books);
-    
-   handleSubmit(book);
+    book.isInCart = true;
+    book.count++;
+    setBooks([...books], books);
+
+    handleSubmit(book);
   };
-  
+
   const handleSubmit = async (book) => {
-      console.log(book);
-    
-   
+    console.log(book);
+
+
     //edit
     try {
       await axios.patch(
-        `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/`+book.id, book);
-        
+        `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/` + book.id, book);
+
     } catch (error) {
       alert("Cannot change item data");
     }
-    
+
   };
 
   const handleRemoveItem = async (book) => {
@@ -68,7 +68,7 @@ const App = () => {
     const index = books.indexOf(book);
     //edit
     books[index].isInCart = false;
-    const RemovedBook = [ ...books[index] ];
+    const RemovedBook = [...books[index]];
     setBooks(books);
     // try {
     //   await axios.patch(
@@ -101,7 +101,7 @@ const App = () => {
 
   const handleIncrement = (book) => {
     const index = books.indexOf(book);
-    
+
     //edit
     books[index].count++;
     //
@@ -137,8 +137,8 @@ const App = () => {
             path="/admin"
             element={<Admin books={books} onDelete={handleDelete} />}
           />
-            <Route
-            path="/allbooks"
+          <Route
+            path="/allbooks" books
             element={<AllBooks books={books} />}
           />
           <Route
@@ -147,6 +147,10 @@ const App = () => {
           />
           <Route
             path="/bookdetails/:id"
+            element={<BookDetails books={books} onSave={onCart} />}
+          />
+          <Route
+            path="allbooks/bookdetails/:id"
             element={<BookDetails books={books} onSave={onCart} />}
           />
           <Route

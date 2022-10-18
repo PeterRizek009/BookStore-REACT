@@ -32,19 +32,19 @@ const ShoppingCart = ({ onIncrement, onDecrement , onDelete }) => {
                       </span>
                       <span className="spec mt-3">
                         <div className="d-flex justify-content-between">
-                          <div className="me-2 p-2 border border-dark-2">
-                            {book.count}
-                          </div>
+                        
                           <button
-                            className="btn-sm bg-warning me-3"
+                            className="btn-sm bg-warning"
                             onClick={() => onDecrement(book)}
                             type="button"
                           >
                             <i className="fas fa-minus"></i>
                           </button>
-
+                          <div className="p-2 border border-dark-2">
+                            {book.count}
+                          </div>
                           <button
-                            className="btn-sm bg-warning me-3"
+                            className="btn-sm bg-warning"
                             onClick={() => onIncrement(book)}
                             type="button"
                           >

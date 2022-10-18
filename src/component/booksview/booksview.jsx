@@ -27,9 +27,11 @@ const BooksView = ({ books }) => {
                         ))}
                     </div>
                 </div>
-                <button className="btn btn-dark rounded-pill seemore-Btn" type="button">
+                <Link to={"/allbooks"} className="text-decoration-none">
+                <button className="btn btn-dark rounded-pill seemore-Btn " type="button">
                     See More Books <span><i className="fas fa-arrow-right"></i></span>
                 </button>
+                </Link>
             </div>
         </section>);
 }

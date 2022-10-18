@@ -56,7 +56,7 @@ const NewBooks = ({ books, onSave }) => {
               </div>
             </Link>
             <div className="thumb-content">
-              {/* <h4>{book.name}</h4> */}
+               <h4>{book.name}</h4>
               <p className="item-price">
                 <strike>{book.price}</strike>
                 <span>{book.price}</span>

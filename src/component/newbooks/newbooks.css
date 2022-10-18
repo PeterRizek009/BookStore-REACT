@@ -1,7 +1,7 @@
 
 /* carousel */
 #BooksCarousel {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding: 0 8px;
   }
   
@@ -10,6 +10,7 @@
     max-height: 800px;
     text-align: center;
     overflow: hidden;
+   
   }
   
   #BooksCarousel .carousel-item .img-box {
@@ -29,13 +30,14 @@
     right: 0;
     border: 1px solid #ccc;
     padding: 2px;
-    box-shadow: 29px 40px 80px rgba(0, 0, 0, 0.07);
+    box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
     
   }
   
   #BooksCarousel .carousel-item h4 {
     font-size: 18px;
     margin: 5px 0;
+    color: rgb(57, 0, 0);
   }
   
   #BooksCarousel .carousel-item .btn {
@@ -47,7 +49,6 @@
     background: none;
     border: 1px solid #ccc;
     padding: 5px 10px;
-    margin-top: 3px;
     line-height: 16px;
   }
   
