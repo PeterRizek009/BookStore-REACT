@@ -34,15 +34,14 @@ const Header = () => {
             </div>
             <div className="carousel-inner">
                 {generateCarouselItem()}
-
             </div>
             {/* next and previous buttons  */}
-            <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            {/* <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" />
             </button>
             <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                 <span className="carousel-control-next-icon" />
-            </button>
+            </button> */}
 
         </div>
     </React.Fragment> );

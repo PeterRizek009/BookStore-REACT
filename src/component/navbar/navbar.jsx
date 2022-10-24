@@ -1,4 +1,4 @@
-import  React , { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from 'react-router-dom';
 import NavTop from "./navtop";
 import './navbar.css'
@@ -7,13 +7,13 @@ import Books from "../db";
 
 const Navbar = () => {
 
-  const [cartnum , setCartNum] = useState([])
+  const [cartnum, setCartNum] = useState([])
 
-  
+
   useEffect(() => {
     const cartBooks = Books.filter((element) => element.isInCart === true);
     setCartNum(cartBooks)
-  } , [cartnum])
+  }, [cartnum])
 
 
   return (<>
@@ -46,7 +46,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item mx-lg-4">
-                <Link className="nav-link" to={"/newReleased"}>New Released Books</Link>
+                <Link className="nav-link" to={"/newReleased"}>Wishlist <i className="far fa-heart"></i></Link>
               </li>
               <li className="nav-item mx-lg-4">
                 <Link className="nav-link" to={"/aboutus"}>About us</Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="navbar align-self-center d-flex d-sm-inline-flex mt-lg-0 mt-sm-2">
+          <div className="nav-item   mt-2">
             <NavLink className="nav-icon position-relative text-decoration-none" to={'./shoppingcart'}>
               <i className="fa fa-fw fa-cart-arrow-down text-dark" />
               <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{cartnum.length}</span>

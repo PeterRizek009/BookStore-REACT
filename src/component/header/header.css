@@ -12,6 +12,19 @@
   background-size: cover;
 }
 
+
+#myCarousel .carousel-indicators button{
+  cursor: pointer;
+  background: #fff;
+  border-radius: 40px;
+  width: 22px;
+  height: 4px;
+}
+
+
+
+
+
 .carousel-item #img1 {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(./../../images/img1.jpg);
