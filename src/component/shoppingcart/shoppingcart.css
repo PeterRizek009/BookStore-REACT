@@ -1,8 +1,11 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #eee;
+}
 
 .product-details {
   padding: 10px;
@@ -20,53 +23,107 @@
 .product-details h2 b {
   color: #08023d;
 }
-body {
-  background: #eee;
-}
-
-.cart {
-  background: #fff;
-}
 
 .p-about {
   font-size: 12px;
 }
 
-.table-shadow {
-  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+
+.cart {
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+   
 }
 
-.items {
-  box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
+.tablecart {
+  margin-top: 10px;
 }
 
-.spec {
-  font-size: 10px;
- 
+.tablecart thead {
+  font-size: 14px;
+  border-color: #EDF1FF;
+  background-color: #EDF1FF;
 }
 
-.spec button{
-  width: 25px;
-  height: 35px;
-  border: 1px solid #eee;
+.tablecart thead tr td{
+  border: 1px solid #EDF1FF;
+  
 }
-.spec button i{
-  font-size: 8px;
-  text-align: center;
-  border-radius: 10%;
+.tablecart  td {
+  border: 1px solid #EDF1FF;
+  
 }
 
-.delete{
+.align-middle{
+  font-size: 16px;
+}
+.tablecart button{
+  border: none;
+  background-color: #08023d;
+  color: white;
+  transition: 0.5s color ease-in-out;
+}
+
+.tablecart button:hover{
+  background-color: #767474;
+  
+}
+
+.tablecart .input{
+  font-size: 12px;
+  padding: 6px;
+}
+
+.tablecart i{
+  padding: 8px;
+  font-size: 12px;
+}
+
+.tablecart .delete {
   cursor: pointer;
   font-size: 18px;
   color: #02385a;
   transition: 0.2s color ease-in-out;
 }
-.delete span{
-  padding-left: 8px;
+
+
+.delete:hover {
+  color: #f19500;
+}
+
+
+.card{
+  padding: 0;
+  margin-top: 40px;
+  max-height: 250px;
+}
+.card h6 {
   font-size: 14px;
 }
 
-.delete:hover{
-  color: #f19500;
+.card button {
+  font-size: 12px;
+  margin-top: 20px;
+  
 }
+
+@media (max-width: 700px) {
+     .card{
+      width: 200px
+     }
+
+     .align-middle{
+      font-size: 12px;
+    }
+
+    .tablecart i{
+      font-size: 8px;
+      
+    }
+    .tablecart input{
+      font-size: 6px;
+      
+    }
+}
+
+

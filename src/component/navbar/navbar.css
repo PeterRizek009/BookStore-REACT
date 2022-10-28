@@ -9,7 +9,7 @@
   transition: 0.5s text-decoration ease-in-out;
 }
 .nav-link:hover{
-  text-decoration: underline;
+  background-color: gainsboro;
   color: black;
 }
 

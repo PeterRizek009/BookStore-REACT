@@ -1,8 +1,8 @@
 /* start of science  */
-.Scicence-books {
+.most-books {
     background-color: rgb(235, 235, 235);
   }
-  .Scicence-books .sci-books {
+  .most-books .sci-books {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,7 +11,7 @@
     margin: 0 auto;
   }
   
-  .Scicence-books .book {
+  .most-books .book {
     width: 120px;
     padding: 0 8px;
     margin: 20px;
@@ -19,7 +19,7 @@
     transition: 0.2s display ease-in-out;
   }
   
-  .Scicence-books .book img {
+  .most-books .book img {
     border: 2px solid #08023d;
     padding: 4px;
     max-width: 140px;
@@ -27,22 +27,22 @@
     transition: 0.2s transform ease-in-out;
   }
   
-  .Scicence-books .book img:hover {
+  .most-books .book img:hover {
     transform: scale(1.02);
     opacity: 0.2;
   }
   
-  .Scicence-books .book .thumb-content {
+  .most-books .book .thumb-content {
     margin-top: 5px;
   }
-  .Scicence-books .book .thumb-content h5 {
+  .most-books .book .thumb-content h5 {
     color: #457b9d;
     font-family: "Sansita Swashed", cursive;
   }
-  .Scicence-books .book .thumb-content .item-price strike {
+  .most-books .book .thumb-content .item-price strike {
     color: #313335;
   }
-  .Scicence-books .book .thumb-content .item-price span {
+  .most-books .book .thumb-content .item-price span {
     color: #00b90f;
   }
   
@@ -50,7 +50,8 @@
     font-size: 13px;
     display: block;
     position: relative;
-    margin-left:1000px;
+    margin: 0 auto;
+    width: 120px;
     transition: 0.5s color ease-in-out;
   }
   .seemore-Btn:hover{
@@ -66,7 +67,7 @@
   }
 
   @media screen and (max-width: 992px) {
-    .Scicence-books .sci-books {
+    .most-books .sci-books {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -74,8 +75,16 @@
       padding: 0 20px;
     }
     .seemore-Btn{
+      font-size: 12px;
+     
+    }
+    
+  }
+  @media screen and (max-width: 1100px) {
+    
+    .seemore-Btn{
       font-size: 13px;
-      margin-left:350px;
+      
     }
     
   }
@@ -84,8 +93,8 @@
       max-width: 90px;
     }
     .seemore-Btn{
-      font-size: 10px;
-      margin-left:300px;
+      font-size: 13px;
+     
     }
   }
   

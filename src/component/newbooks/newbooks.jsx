@@ -58,8 +58,8 @@ const NewBooks = ({ books, onSave }) => {
             <div className="thumb-content">
                <h4>{book.name}</h4>
               <p className="item-price">
-                <strike>{book.price}</strike>
-                <span>{book.price}</span>
+                <strike>{book.price}$</strike>
+                <span>{book.price - (2)}$</span>
               </p>
               <div className="star-rating">
                 <ul className="list-inline">
@@ -81,7 +81,7 @@ const NewBooks = ({ books, onSave }) => {
       <section className="books">
         <div className="container" id="novels">
           <div className="row">
-            <div className="col-md-12  mx-auto">
+            <div className="col-md-12 mx-auto">
               <h2>
                 NEW  <b>Books</b>
               </h2>
@@ -91,18 +91,22 @@ const NewBooks = ({ books, onSave }) => {
                 data-bs-ride="BooksCarousel"
               >
                 <div className="carousel-inner">
-
                   <div className="carousel-item active">
                     <div className="row" >
                       {createSlide(0, 4)}
                     </div>
                   </div>
+                  
                   <div className="carousel-item">
                     <div className="row">
                       {createSlide(5, 9)}
                     </div>
                   </div>
-
+                  <div className="carousel-item">
+                    <div className="row">
+                      {createSlide(10, 14)}
+                    </div>
+                  </div>
                 </div>
                 <div>{carouselControl()}</div>
               </div>

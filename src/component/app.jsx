@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import axios from "axios";
 import AddNewItem from "./addnewitem/addnewitem";
 import Admin from "./admin/admin";
 import ShoppingCart from "./shoppingcart/shoppingcart";
@@ -10,6 +9,7 @@ import SignIn from "./signin/signin";
 import Navbar from "./navbar/navbar";
 import Books from "./db"
 import AllBooks from "./allbooks/allbooks";
+import Wishlist from "./wishlist/wishilst";
 
 const App = () => {
 
@@ -37,39 +37,47 @@ const App = () => {
   }, []);
 
 
+  const onWishlist = (book) => {
+    //edit
+    book.wishlist = true;
+    setBooks([...books], books);
+    
+  };
+
   const onCart = (book) => {
-    //Clone
-    const index = books.indexOf(book);
+    
     //edit
     book.isInCart = true;
     book.count++;
     setBooks([...books], books);
 
-    handleSubmit(book);
+   // handleSubmit(book);
   };
 
-  const handleSubmit = async (book) => {
-    console.log(book);
+  // const handleSubmit = async (book) => {
+  //   //edit
+  //   try {
+  //     await axios.patch(
+  //       `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/` + book.id, book);
 
+  //   } catch (error) {
+  //     alert("Cannot change item data");
+  //   }
 
-    //edit
-    try {
-      await axios.patch(
-        `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/` + book.id, book);
-
-    } catch (error) {
-      alert("Cannot change item data");
-    }
-
-  };
+  // };
 
   const handleRemoveItem = async (book) => {
     //clone
-    const index = books.indexOf(book);
+
     //edit
-    books[index].isInCart = false;
-    const RemovedBook = [...books[index]];
-    setBooks(books);
+
+    if(book.wishlist === true){
+      book.wishlist = false;
+    }
+    
+    book.isInCart = false;
+    //const RemovedBook = [...books[index]];
+    setBooks([...books], books);
     // try {
     //   await axios.patch(
     //     `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/`+index,
@@ -101,7 +109,6 @@ const App = () => {
 
   const handleIncrement = (book) => {
     const index = books.indexOf(book);
-
     //edit
     books[index].count++;
     //
@@ -147,11 +154,20 @@ const App = () => {
           />
           <Route
             path="/bookdetails/:id"
-            element={<BookDetails books={books} onSave={onCart} />}
+            element={<BookDetails books={books} onSave={onCart} onWishlist={onWishlist} />}
           />
+          
           <Route
             path="allbooks/bookdetails/:id"
             element={<BookDetails books={books} onSave={onCart} />}
+          />
+             <Route
+            path="wishlist/bookdetails/:id"
+            element={<BookDetails books={books} onSave={onCart} />}
+          />
+          <Route
+            path="/wishlist"
+            element={<Wishlist  books={books} onDelete={handleRemoveItem} />}
           />
           <Route
             path="/shoppingcart"

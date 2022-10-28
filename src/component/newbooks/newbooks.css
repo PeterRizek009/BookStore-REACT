@@ -1,141 +1,130 @@
-
 /* carousel */
 #BooksCarousel {
-    margin-bottom: 25px;
-    padding: 0 8px;
-  }
-  
-  
-  #BooksCarousel .carousel-item {
-    max-height: 800px;
-    text-align: center;
-    overflow: hidden;
-   
-  }
-  
-  #BooksCarousel .carousel-item .img-box {
-    height: 200px;
-    width: 100%;
-    position: relative;
-  }
-  
-  #BooksCarousel .carousel-item img {
-    max-width: 60%;
-    max-height: 100%;
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    border: 1px solid #ccc;
-    padding: 2px;
-    box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
-    
-  }
-  
-  #BooksCarousel .carousel-item h4 {
-    font-size: 18px;
-    margin: 5px 0;
-    color: rgb(57, 0, 0);
-  }
-  
-  #BooksCarousel .carousel-item .btn {
-    color: #333;
-    border-radius: 0;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
-    background: none;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    line-height: 16px;
-  }
-  
-  #BooksCarousel .carousel-item .btn:hover,
-  #BooksCarousel .carousel-item .btn:focus {
-    color: #fff;
-    background: #000;
-    box-shadow: none;
-  }
-  
-  #BooksCarousel .carousel-item .btn i {
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 5px;
-  }
-  
-  #BooksCarousel .thumb-wrapper {
-    text-align: center;
-    
-  }
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
 
+
+#BooksCarousel .carousel-item {
+  max-height: 800px;
+  text-align: center;
+  overflow: hidden;
+ 
+}
+
+#BooksCarousel .carousel-item .img-box {
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+#BooksCarousel .carousel-item img {
+  max-width: 60%;
+  max-height: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
   
-  #BooksCarousel .thumb-content {
-    padding: 10px;
+}
+
+#BooksCarousel .carousel-item h4 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: rgb(57, 0, 0);
+}
+
+#BooksCarousel .carousel-item .btn {
+  color: #333;
+  border-radius: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  line-height: 16px;
+}
+
+#BooksCarousel .carousel-item .btn:hover,
+#BooksCarousel .carousel-item .btn:focus {
+  color: #fff;
+  background: #000;
+  box-shadow: none;
+}
+
+
+
+#BooksCarousel .thumb-wrapper {
+  text-align: center;
+}
+
+#BooksCarousel .thumb-content {
+  padding: 4px;
+}
+#BooksCarousel .carousel-control-prev,
+#BooksCarousel .carousel-control-next {
+  width: 40px;
+}
+
+#BooksCarousel .carousel-control-prev-icon,
+#BooksCarousel .carousel-control-next-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: rgba(124, 122, 122, 0.495);
+}
+#BooksCarousel .item-price {
+  font-size: 13px;
+  padding: 2px 0;
+}
+
+#BooksCarousel .item-price strike {
+  color: #999;
+  margin-right: 5px;
+}
+
+#BooksCarousel .item-price span {
+  color: #86bd57;
+  font-size: 110%;
+}
+
+
+.star-rating li {
+  padding: 0;
+}
+
+.star-rating i {
+  font-size: 14px;
+  color: #ffc000;
+}
+
+
+@media (min-width: 400px) and (max-width: 550px) {
+  #BooksCarousel .carousel-item{
+    width: 100%;
+    max-height: 348px;
+    overflow-y: hidden;
   }
-  #BooksCarousel .carousel-control-prev,
-  #BooksCarousel .carousel-control-next {
-    width: 40px;
+ 
+  #BooksCarousel .carousel-item .img-box{
+    width: 60%;
+    margin: 0 auto;
   }
-  
-  #BooksCarousel .carousel-control-prev-icon,
-  #BooksCarousel .carousel-control-next-icon {
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: rgba(124, 122, 122, 0.495);
+}
+
+@media (min-width: 550px)  and (max-width: 900px){
+  #BooksCarousel .carousel-item{
+    width: 140%;
+    max-height: 360px;
+    overflow: hidden;
   }
-  #BooksCarousel .item-price {
-    font-size: 13px;
-    padding: 2px 0;
+  #BooksCarousel .carousel-item .img-box{
+    width: 80%;
+    margin: 0 auto;
   }
-  
-  #BooksCarousel .item-price strike {
-    color: #999;
-    margin-right: 5px;
-  }
-  
-  #BooksCarousel .item-price span {
-    color: #86bd57;
-    font-size: 110%;
-  }
-  
-  
-  .star-rating li {
-    padding: 0;
-  }
-  
-  .star-rating i {
-    font-size: 14px;
-    color: #ffc000;
-  }
-  
-  
-  @media (min-width: 480px) and (max-width: 550px) {
-    #BooksCarousel .carousel-item{
-      width: 100%;
-      max-height: 360px;
-      overflow: hidden;
-    }
-    #BooksCarousel .carousel-item .img-box{
-      width: 60%;
-      margin: 0 auto;
-    }
-  }
-  
-  @media (min-width: 550px)  and (max-width: 900px){
-    #BooksCarousel .carousel-item{
-      width: 140%;
-      max-height: 360px;
-      overflow: hidden;
-    }
-    #BooksCarousel .carousel-item .img-box{
-      width: 80%;
-      margin: 0 auto;
-    }
-  }
-  /* end of newbooks */
-  
-  
-  
-  
+}
+/* end of newbooks */

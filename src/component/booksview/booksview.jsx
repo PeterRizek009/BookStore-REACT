@@ -6,7 +6,7 @@ import images from './../../images';
 const BooksView = ({ books }) => {
   
     return (
-        <section className="Scicence-books">
+        <section className="most-books">
             <div className="b-example-divider" />
             <div className="container" id="Scicence">
                 <div className="row">
@@ -28,8 +28,8 @@ const BooksView = ({ books }) => {
                     </div>
                 </div>
                 <Link to={"/allbooks"} className="text-decoration-none">
-                <button className="btn btn-dark rounded-pill seemore-Btn " type="button">
-                    See More Books <span><i className="fas fa-arrow-right"></i></span>
+                <button className="btn btn-dark rounded-pill seemore-Btn" type="button">
+                    More Books <span><i className="fas fa-arrow-right"></i></span>
                 </button>
                 </Link>
             </div>

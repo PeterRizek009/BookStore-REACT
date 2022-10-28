@@ -5,14 +5,18 @@ import './navbar.css'
 import Books from "../db";
 
 
+
 const Navbar = () => {
 
   const [cartnum, setCartNum] = useState([])
+  const [wishcount, setWishCount] = useState()
 
 
   useEffect(() => {
     const cartBooks = Books.filter((element) => element.isInCart === true);
+    const wishlistBooks = Books.filter((element) => element.wishlist === true);
     setCartNum(cartBooks)
+    setWishCount(wishlistBooks.length)
   }, [cartnum])
 
 
@@ -46,7 +50,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item mx-lg-4">
-                <Link className="nav-link" to={"/newReleased"}>Wishlist <i className="far fa-heart"></i></Link>
+                <Link className= {wishcount > 0 ?"nav-link text-danger" : "nav-link"} to={"/wishlist"}>Wishlist <i className={wishcount > 0 ?"fas fa-heart text-danger" : "far fa-heart"}   ></i></Link>
               </li>
               <li className="nav-item mx-lg-4">
                 <Link className="nav-link" to={"/aboutus"}>About us</Link>
