@@ -13,8 +13,8 @@ const BooksView = ({ books }) => {
                     <div className="col-md-12">
                         <h2>Most<b> Bought Books</b></h2>
                     </div>
-                    <div className="sci-books">
-                        {(books.slice(0, 8)).map((books) => (
+                    <div className="books">
+                        {(books.slice(0,10)).map((books) => (
                             <div className="book" key={books.id}>
                                 <Link to={`./bookdetails/${books.id}`}><img src={images[(books.id)]} alt='' /></Link>
                                 <div className="thumb-content">

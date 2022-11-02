@@ -59,7 +59,7 @@ body {
 }
 .tablecart button{
   border: none;
-  background-color: #08023d;
+  background-color: #510303;
   color: white;
   transition: 0.5s color ease-in-out;
 }
@@ -81,8 +81,8 @@ body {
 
 .tablecart .delete {
   cursor: pointer;
-  font-size: 18px;
-  color: #02385a;
+  font-size: 20px;
+  color: #510303;
   transition: 0.2s color ease-in-out;
 }
 

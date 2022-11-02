@@ -8,7 +8,7 @@ const Wishlist = ({ books, onDelete }) => {
     const wishbooks = books.filter((book) => book.wishlist === true);
 
     return (
-        <div className="container mt-5 p-3 rounded cart">
+        <div className="container my-5 p-3 rounded cart">
             <div className="row no-gutters">
                 <div className="col-md-8">
                     <div className="product-details mb-3">

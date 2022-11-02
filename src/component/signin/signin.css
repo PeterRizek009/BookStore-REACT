@@ -1,18 +1,50 @@
+.signIn {
+  display:block;
+  max-width: 600px;
+  max-height: 800px;
+  background: linear-gradient(-135deg,#111111,#5a0202 , #f30000);
+  border-radius: 10px;
+  margin: 80px auto;
+  border-radius: 2px;
+  z-index: 100;
+  padding: 15px;
+  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+}
 
-  .signIn{
-      margin: 200px auto;
-   
-  }
 
-  .myform {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-   
-   
-  }
-  
-  .myform input {
-    min-width: 400px;
-  }
-  
+.myform {
+  display: block;
+  border-radius: 2px;
+  background: whitesmoke;
+  padding: 20px;
+}
+form{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10px auto;
+  align-items: center;
+}
+
+.myform input {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  display: block;
+  width: 300px;
+  background: #e6e6e6;
+  height: 50px;
+  padding: 20px;
+  border-radius: 25px;
+}
+.myform .btn {
+  height: 45px;
+  color: white;
+  background-color: rgb(85, 1, 1);
+  transition: 0.5s color ease-in-out;
+}
+
+
+.myform .btn:hover{
+  background-color: rgb(91, 87, 87);
+  color: white;
+}

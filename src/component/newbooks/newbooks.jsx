@@ -52,15 +52,17 @@ const NewBooks = ({ books, onSave }) => {
             <div className="box-small">
             <Link to={`/bookdetails/${book.id}`}>
               <div className="img-box">
-                <img src={images[(book.id - 1)]} alt="image" />
+                <img src={images[(book.id - 1)]} alt="" />
               </div>
             </Link>
             <div className="thumb-content">
+              
                <h4>{book.name}</h4>
               <p className="item-price">
                 <strike>{book.price}$</strike>
                 <span>{book.price - (2)}$</span>
               </p>
+             
               <div className="star-rating">
                 <ul className="list-inline">
                   {createStars()}
@@ -78,7 +80,7 @@ const NewBooks = ({ books, onSave }) => {
   }
   return (
     <div>
-      <section className="books">
+      <section className="books bg-white">
         <div className="container" id="novels">
           <div className="row">
             <div className="col-md-12 mx-auto">

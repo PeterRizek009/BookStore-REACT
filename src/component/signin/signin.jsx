@@ -39,7 +39,7 @@ function SignIn () {
 
   return (
     <section className="signIn">
-      <div className="sign-Box">
+      
         <div className="myform">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
@@ -67,13 +67,22 @@ function SignIn () {
               />
             </div>
 
-            <button type="submit" className="btn btn-primary">
-              Submit
+
+          
+            <button type="submit" className="btn  w-50 rounded-pill">
+              Sign in
             </button>
+
+            <div className="d-inline-flex mt-5">
+              <p className="text-muted m-2">Create new account</p>
+              <button type="submit" className="btn rounded-pill">
+              Sign up
+            </button>
+            </div>
 
           </form>
         </div>
-      </div>
+     
     </section>
   );
 }

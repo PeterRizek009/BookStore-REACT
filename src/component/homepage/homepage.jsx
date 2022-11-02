@@ -10,8 +10,8 @@ const HomePage = ({books , onSave}) => {
         <>
         <Header />  
         <NewBooks books={books} onSave={onSave}/>
+         <AboutUs />
         <BooksView books={books}  />
-        <AboutUs />
         </>
     )
 }

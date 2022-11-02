@@ -1,9 +1,9 @@
 /* carousel */
+
 #BooksCarousel {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 0 4px;
 }
-
 
 #BooksCarousel .carousel-item {
   max-height: 800px;
@@ -34,7 +34,6 @@
 
 #BooksCarousel .carousel-item h4 {
   font-size: 18px;
-  margin: 5px 0;
   color: rgb(57, 0, 0);
 }
 
@@ -68,14 +67,15 @@
 }
 #BooksCarousel .carousel-control-prev,
 #BooksCarousel .carousel-control-next {
-  width: 40px;
+  width: 30px;
 }
 
 #BooksCarousel .carousel-control-prev-icon,
 #BooksCarousel .carousel-control-next-icon {
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: rgba(124, 122, 122, 0.495);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(5, 5, 5, 0.495);
 }
 #BooksCarousel .item-price {
   font-size: 13px;
@@ -106,7 +106,7 @@
 @media (min-width: 400px) and (max-width: 550px) {
   #BooksCarousel .carousel-item{
     width: 100%;
-    max-height: 348px;
+    max-height: 346px;
     overflow-y: hidden;
   }
  

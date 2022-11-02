@@ -1,109 +1,45 @@
-import React, { Component } from "react";
-import "./foote.css"
+import React from "react";
+import './footer.css'
 
+const Footer = () => {
+  return (
+    <div>
+      <footer className="text-center text-white shadow ">
+        <div className="container-fluid pt-2" >
+          <div className="row footer-area">
+            <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
+              <h6>About Us</h6>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
 
-class Footer extends Component {
-  render() {
-    return (
-      <div className="container footer">
-        <footer className="text-center text-lg-start border border-white mt-xl-5 pt-4">
-          <div className="container p-4">
-            <div className="row">
-              <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 className="text-uppercase mb-4">OUR WORLD</h5>
-                <ul className="list-unstyled mb-4">
-                  <li>
-                    <a href="#!" className="text-white">
-                      About us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-white">
-                      Collections
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-white">
-                      Environmental philosophy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-white">
-                      Artist collaborations
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 className="text-uppercase mb-4">Assistance</h5>
-                <ul className="list-unstyled">
-                  <li>
-                    <a href="#!" className="text-white">
-                      Contact us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-white">
-                      Size Guide
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-white">
-                      Shipping Information
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-white">
-                      Returns &amp; Exchanges
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-white">
-                      Payment
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 className="text-uppercase mb-4">Careers</h5>
-                <ul className="list-unstyled">
-                  <li>
-                    <a href="#!" className="text-white">
-                      Jobs
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 className="text-uppercase mb-4">
-                  Sign up to our newsletter
-                </h5>
-                <div className="form-outline form-white mb-4">
-                  <input
-                    type="email"
-                    id="form5Example2"
-                    className="form-control"
-                  />
-                  <label className="form-label" htmlFor="form5Example2">
-                    Email address
-                  </label>
-                </div>
-                <button
-                  type="submit"
-                  className="btn btn-outline-white btn-block"
-                >
-                  Subscribe
+            <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
+              <h6>Newsletter</h6>
+              <p>Stay update with our latest</p>
+              <div className="d-inline-flex align-items-center">
+                <input className="form-control" name="EMAIL" placeholder="Enter Email " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                </input>
+                <button className="click-btn btn btn-default bg-warning">
+                  <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
                 </button>
+             
               </div>
             </div>
+            <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
+              <h6>Follow Me on</h6>
+              <a className="btn btn-link btn-floating btn-lg text-white" href="https://www.linkedin.com/in/peter-rezik-a84408123/" role="button" data-mdb-ripple-color="dark"><i className="fab fa-linkedin" /></a>
+              <a className="btn btn-link btn-floating btn-lg text-white " href="https://github.com/PeterRizek009" role="button" data-mdb-ripple-color="dark"><i className="fab fa-github" /></a>
+            </div>
           </div>
-        </footer>
-      </div>
-    );
-  }
+        </div>
+        <div className="text-center text-white bg-dark p-4">
+          © 2022 Copyright:
+          <a className="text-white" href="https://github.com/PeterRizek009">Peter Rezik</a>
+        </div>
+      </footer>
+    </div>
+  );
 }
+
+
 
 export default Footer;

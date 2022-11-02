@@ -22,9 +22,6 @@
 }
 
 
-
-
-
 .carousel-item #img1 {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(./../../images/img1.jpg);
@@ -90,7 +87,7 @@
 
 /* Books sections  */
 section {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 /* novels */

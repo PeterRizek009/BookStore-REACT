@@ -1,13 +1,13 @@
 /* start of science  */
 .most-books {
-    background-color: rgb(235, 235, 235);
+    background-color: white;
   }
-  .most-books .sci-books {
+  .most-books .books {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
   
@@ -36,7 +36,7 @@
     margin-top: 5px;
   }
   .most-books .book .thumb-content h5 {
-    color: #457b9d;
+    color: #05293f;
     font-family: "Sansita Swashed", cursive;
   }
   .most-books .book .thumb-content .item-price strike {
@@ -50,7 +50,7 @@
     font-size: 13px;
     display: block;
     position: relative;
-    margin: 0 auto;
+    margin:0 0 10px 1000px;
     width: 120px;
     transition: 0.5s color ease-in-out;
   }
@@ -76,25 +76,24 @@
     }
     .seemore-Btn{
       font-size: 12px;
-     
+      margin:0 0 10px 600px;
     }
     
   }
   @media screen and (max-width: 1100px) {
-    
     .seemore-Btn{
       font-size: 13px;
-      
+      margin:0 0 10px 600px;
     }
     
   }
-  @media (max-width: 700px) {
+  @media (min-width: 300px) and (max-width: 700px) {
     .Scicence-books .book img {
       max-width: 90px;
     }
     .seemore-Btn{
       font-size: 13px;
-     
+      margin:0 0 10px 280px;
     }
   }
   

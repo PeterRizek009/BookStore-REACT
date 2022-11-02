@@ -10,6 +10,8 @@ import Navbar from "./navbar/navbar";
 import Books from "./db"
 import AllBooks from "./allbooks/allbooks";
 import Wishlist from "./wishlist/wishilst";
+import Footer from "./footer/footer";
+import './app.css'
 
 const App = () => {
 
@@ -183,6 +185,7 @@ const App = () => {
           />
         </Routes>
       </main>
+      <Footer/>
     </React.Fragment>
   );
 };
