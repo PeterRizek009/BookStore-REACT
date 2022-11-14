@@ -85,7 +85,7 @@ const AllBooks = ({ books }) => {
     return (<>
         <section className="module-small mt-5">
             <div className="container">
-                <form className="row mx-auto">
+                <form className="row  mx-auto">
                     <div className="col-sm-4 mb-3">
                         <select className="form-control" onChange={handleSelectName}>
                             <option>All Books</option>
@@ -110,15 +110,15 @@ const AllBooks = ({ books }) => {
                 </form>
             </div>
         </section>
-        <section className="module-small">
+        <section className="module-large mx-auto">
             <div className="container">
-                <div className="row multi-columns-row">
+                <div className="row">
                     <div className="d-flex flex-start flex-wrap">
                         {selectedBooks.map((book) => (
                             <div className="shop-items m-1">
                                 <div className="shop-item-image" key={book.id}>
                                     <Link to={`./bookdetails/${book.id}`}>
-                                        <img src={images[(book.id)]} alt='' />
+                                        <img src={images[(book.id)]} alt='book' loading='lazy' />
                                         <i className="fas fa-cart-shopping"></i>
                                     </Link>
                                 </div>

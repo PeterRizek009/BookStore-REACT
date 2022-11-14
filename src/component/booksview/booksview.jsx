@@ -16,7 +16,7 @@ const BooksView = ({ books }) => {
                     <div className="books">
                         {(books.slice(0,10)).map((books) => (
                             <div className="book" key={books.id}>
-                                <Link to={`./bookdetails/${books.id}`}><img src={images[(books.id)]} alt='' /></Link>
+                                <Link to={`./bookdetails/${books.id}`}><img src={images[(books.id)]} alt='book' loading="lazy"/></Link>
                                 <div className="thumb-content">
                                     <h5>{books.name}</h5>
                                     <p className="item-price">

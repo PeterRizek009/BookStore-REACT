@@ -5,8 +5,7 @@ import './navbar.css'
 import Books from "../db";
 
 
-
-const Navbar = () => {
+const Navbar = ({ user }) => {
 
   const [cartnum, setCartNum] = useState([])
   const [wishcount, setWishCount] = useState()
@@ -17,7 +16,9 @@ const Navbar = () => {
     const wishlistBooks = Books.filter((element) => element.wishlist === true);
     setCartNum(cartBooks)
     setWishCount(wishlistBooks.length)
+
   }, [cartnum])
+
 
 
   return (<>
@@ -40,7 +41,12 @@ const Navbar = () => {
         <div className="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbarNav">
           <div className="flex-fill">
             <ul className="nav navbar-nav d-lg-inline-flex  mx-lg-5">
-
+              {user === "admin" ?
+                <li className="nav-item mx-lg-4">
+                  <Link className="nav-link" to={"/admin"}>Admin page</Link>
+                </li>
+                : 
+                <>
               <li className="nav-item mx-lg-4">
                 <Link className="nav-link" aria-current="page" to={"/"}>Home</Link>
               </li>
@@ -55,17 +61,27 @@ const Navbar = () => {
               <li className="nav-item mx-lg-4">
                 <Link className="nav-link" to={"/aboutus"}>About us</Link>
               </li>
+              </>
+              }
+
             </ul>
           </div>
 
-          <div className="nav-item   mt-2">
+          <div className="nav-item  mt-2">
             <NavLink className="nav-icon position-relative text-decoration-none" to={'./shoppingcart'}>
               <i className="fa fa-fw fa-cart-arrow-down text-dark" />
               <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{cartnum.length}</span>
             </NavLink>
-            <NavLink className="nav-icon position-relative text-decoration-none mx-5" to={"./signin"}>
+       
+              {user ? 
+               <NavLink className="nav-icon position-relative text-decoration-none mx-5 " to={'./signin'}>
+                 {`Hi ${user}`}
+              </NavLink>
+               : 
+               <NavLink className="nav-icon position-relative text-decoration-none mx-5" to={'./signin'}>
               <i className="fa fa-fw fa-user text-dark mr-3" />
             </NavLink>
+            }
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 const Books =  [
       {
         "id": "1",
-        "name": "Stock markets ",
+        "name": "Stocks",
         "price": 5,
         "isInCart": false,
         "wishlist": false,
@@ -25,7 +25,7 @@ const Books =  [
       },
       {
         "id": "4",
-        "name": "Stock markets ",
+        "name": "Stocks",
         "price": 19,
         "isInCart": false,
         "wishlist": false,

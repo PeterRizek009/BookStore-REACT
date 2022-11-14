@@ -8,19 +8,21 @@
     justify-content: center;
     flex-wrap: wrap;
     max-width: 900px;
+    align-items: center;
     margin: 0 auto;
   }
   
   .most-books .book {
-    width: 120px;
-    padding: 0 8px;
-    margin: 20px;
-    text-align: center;
-    transition: 0.2s display ease-in-out;
+    padding: 8px;
+    margin: 10px;
+    border: 0.5px solid #d2d2d2;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
   }
   
   .most-books .book img {
-    border: 2px solid #08023d;
+    border: 2px solid #d9d9d9;
     padding: 4px;
     max-width: 140px;
     cursor: pointer;
@@ -29,11 +31,13 @@
   
   .most-books .book img:hover {
     transform: scale(1.02);
-    opacity: 0.2;
+    opacity: 0.8;
   }
   
   .most-books .book .thumb-content {
-    margin-top: 5px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
   }
   .most-books .book .thumb-content h5 {
     color: #05293f;

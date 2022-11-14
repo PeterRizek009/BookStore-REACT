@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import AddNewItem from "./addnewitem/addnewitem";
 import Admin from "./admin/admin";
+import Edit from "./edit/edit";
 import ShoppingCart from "./shoppingcart/shoppingcart";
 import BookDetails from "./bookdetails/bookdetails";
 import HomePage from "./homepage/homepage";
@@ -16,7 +17,7 @@ import './app.css'
 const App = () => {
 
   const [books, setBooks] = useState([]);
-
+  const [user , setUser] = useState("");
   // const getData = async () => {
   //   await axios
   //     .get(
@@ -33,7 +34,7 @@ const App = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setBooks(Books);
-      console.log(Books);
+     
     }, 1200);
     return () => clearTimeout(timeout)
   }, []);
@@ -92,10 +93,8 @@ const App = () => {
 
   const handleDelete = async (book) => {
     //clone
-    const oldbooks = { ...book };
-    console.log(oldbooks);
     //edit
-    const newbooks = books.filter((p) => p.id !== books.id);
+    const newbooks = books.filter((p) => book.id !== p.id);
     //set state
     setBooks(newbooks);
     // try {
@@ -133,18 +132,22 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <Navbar books={books} />
-
+      <Navbar books={books} user={user} />
+       
       <main>
         <Routes>
           <Route
             path="/"
             element={<HomePage onSave={onCart} books={books} />}
           />
-          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signin" element={<SignIn  setUser={setUser}/>} />
           <Route
             path="/admin"
-            element={<Admin books={books} onDelete={handleDelete} />}
+            element={<Admin/>}
+          />
+           <Route
+            path="/admin/edit"
+            element={<Edit books={books} onDelete={handleDelete} />}
           />
           <Route
             path="/allbooks" books
@@ -161,11 +164,11 @@ const App = () => {
           
           <Route
             path="allbooks/bookdetails/:id"
-            element={<BookDetails books={books} onSave={onCart} />}
+            element={<BookDetails books={books} onSave={onCart} onWishlist={onWishlist} />}
           />
              <Route
             path="wishlist/bookdetails/:id"
-            element={<BookDetails books={books} onSave={onCart} />}
+            element={<BookDetails books={books} onSave={onCart} onWishlist={onWishlist} />}
           />
           <Route
             path="/wishlist"
