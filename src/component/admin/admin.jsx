@@ -12,7 +12,7 @@ const Admin = () => {
         <div className="box">
             <h4>Add new book</h4>
           <Link className="btn btn-danger rounded-pill mt-5 mr-5" to={"./addnewitem"}>
-            Add Item <i class="fas fa-plus"></i>
+            Add Item <i className="fas fa-plus"></i>
           </Link>
         </div>
         <div className="box">

@@ -3,9 +3,16 @@ import "./addnewitem.css";
 import Books from '../db';
 import Alert from '../alert/alert';
 
-const AddNewItem = ({ books }) => {
+const AddNewItem = ({ books, setBooks }) => {
 
-    const [newbook, setNewBook] = useState(books);
+
+
+    const [newbook, setNewBook] = useState({
+        name: "",
+        price: "",
+        id: ""
+    });
+
     const [alert, setAlert] = useState(false);
     // async componentDidMount() {
     //     let { data } = await axios.get("http://localhost:3004/Books/");
@@ -21,10 +28,17 @@ const AddNewItem = ({ books }) => {
 
     const handleChange = (e) => {
         //Edit
-        newbook[e.currentTarget.name] = e.currentTarget.value;
-        //Set state
-        setNewBook(newbook);
-        
+        setNewBook({
+            ...newbook, [e.target.name]: e.target.value,
+        });
+    };
+
+    const resetInputField = () => {
+        setNewBook({
+            name: "",
+            price: "",
+            id: ""
+        });
     };
 
 
@@ -34,19 +48,20 @@ const AddNewItem = ({ books }) => {
         e.preventDefault();
         Books.push(newbook);
         setAlert(true);
+
         //Call Backend
         // const obj = {...this.state,count: 0};
         // await axios.post("https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books", obj);
         // console.log("Book added");
     };
 
-    const handleReset =  (e) => {
-       console.log(e.target.value);
-    } 
+    const handleReset = (e) => {
+        console.log(e.target.value);
+    }
     return (
         <React.Fragment>
             {alert ?
-                <Alert message={"Book added successfully!"}/>
+                <Alert message={"Book added successfully!"} />
                 : null}
             <div className="title my-3 mx-auto">
                 <h2>Add New<b>Book</b></h2>
@@ -91,12 +106,12 @@ const AddNewItem = ({ books }) => {
                     />
                 </div>
                 <div className='d-inline-flex'>
-                <button type="submit" className="btn btn-danger px-5 mx-2 rounded-pill ">
-                    Add
-                </button>
-                <button type="submit"  className="btn btn-danger px-5 rounded-pill" onSubmit={handleReset}>
-                   Reset
-                </button>
+                    <button type="submit" className="btn btn-danger px-5 mx-2 rounded-pill ">
+                        Add
+                    </button>
+                    <button onClick={resetInputField} className="btn btn-danger px-5 rounded-pill" onSubmit={handleReset}>
+                        Reset
+                    </button>
                 </div>
             </form>
         </React.Fragment>);

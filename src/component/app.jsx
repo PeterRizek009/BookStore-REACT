@@ -155,7 +155,7 @@ const App = () => {
           />
           <Route
             path="/admin/addnewitem"
-            element={<AddNewItem books={books} />}
+            element={<AddNewItem books={books} setBooks={setBooks}/>}
           />
           <Route
             path="/bookdetails/:id"

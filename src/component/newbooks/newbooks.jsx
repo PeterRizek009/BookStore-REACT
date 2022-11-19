@@ -6,7 +6,7 @@ import './newbooks.css'
 import { motion } from "framer-motion"
 
 
-const NewBooks = ({ books, onSave }) => {
+const NewBooks = ({ books }) => {
 
   const [width, setWidth] = useState(0)
 
@@ -16,6 +16,8 @@ const NewBooks = ({ books, onSave }) => {
   useEffect(() => {
     setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
   }, [])
+
+  
   const createStars = () => {
     let stars = [];
     let randomNumber = Math.floor(Math.random() * 4 + 1);
@@ -44,11 +46,11 @@ return (
               <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="inner-carousel">
                 {books.map((book) => (
                   <motion.div className="item" key={book.id}>
-                    <div className="imgBox">
+                    <div className="imgBox" >
                       <img src={images[(book.id - 1)]} alt="bookimg" />
                       <div className="content">
                         <div className="name-price">
-                          <Link to={`/bookdetails/${book.id}`}>
+                          <Link to={`/bookdetails/${book.id}`} style={{ textDecoration: 'none' }}>
                             <h4>{book.name}</h4>
                           </Link>
                           <p className="item-price">

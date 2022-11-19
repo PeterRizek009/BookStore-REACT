@@ -4,11 +4,11 @@ import users from "../users.json"
 import { useNavigate } from "react-router"
 
 
-const SignIn = ({setUser}) => {
+const SignIn = ({ setUser }) => {
 
-   const [closed , setClosed] =  useState(false);
-  
-   const [data, setData] = useState({
+  const [closed, setClosed] = useState(false);
+
+  const [data, setData] = useState({
     username: "",
     password: "",
     errors: {}
@@ -20,30 +20,31 @@ const SignIn = ({setUser}) => {
     e.preventDefault();
     users.users.map((user) => {
       if (user.username === data.username && user.password === data.password) {
-        setUser(data.username);
-        if (user.role === "1") {
-          navigate("/admin", { replace: true });
-        }else{
-          navigate("/", { replace: true });
-        }
+      setUser(data.username);
+      if (user.role === "1") {
+        navigate("/admin", { replace: true });
+      } else {
+        navigate("/", { replace: true });
       }
-    })
-
+    }
+      }
+      )
   }
 
-  const handleChange = (e) => {
-    //set new data after change 
-    setData({
-      ...data, [e.target.name]: e.target.value,
-    });
-  };
+const handleChange = (e) => {
+  //set new data after change 
+  setData({
+    ...data, [e.target.name]: e.target.value,
+  });
+};
 
-  const handlecloseform =  () => {
-     setClosed(true);
-  } 
+const handlecloseform = () => {
+  setClosed(true);
+  navigate("/", { replace: true });
+}
 
-  return (
-    <div className={closed ? "closed" : "sign"}>
+return (
+  <div className={closed ? "closed" : "sign"}>
     <button className="close-Btn btn btn-danger" onClick={handlecloseform}>
       <i className="fas fa-times"></i>
     </button>
@@ -95,8 +96,8 @@ const SignIn = ({setUser}) => {
         </div>
       </div>
     </section>
-    </div>
-  );
+  </div>
+);
 }
 export default SignIn;
 

@@ -9,8 +9,8 @@ const HomePage = ({books , onSave}) => {
     return(
         <>
         <Header />  
-        <NewBooks books={books} onSave={onSave}/>
-         <AboutUs />
+        <NewBooks books={books} />
+        <AboutUs />
         <BooksView books={books}  />
         </>
     )

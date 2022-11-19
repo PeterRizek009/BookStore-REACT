@@ -16,7 +16,7 @@ const Footer = () => {
               <h6>Newsletter</h6>
               <p>Stay update with our latest</p>
               <div className="d-inline-flex align-items-center">
-                <input className="form-control" name="EMAIL" placeholder="Enter Email " onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Enter Email '" required="" type="email">
+                <input className="form-control" name="EMAIL" placeholder="Enter Email "   required="" type="email">
                 </input>
                 <button className="click-btn btn btn-default bg-warning">
                   <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
