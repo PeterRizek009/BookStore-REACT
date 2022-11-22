@@ -2,6 +2,7 @@
 
 .carousel {
   overflow: hidden;
+  
   cursor: grab;
   margin-bottom: 50px;
 }
@@ -28,20 +29,23 @@
 }
 
 .item .content h4{
-  padding-top: 4px;
+  margin: 8px auto;
   font-size: 20px;
   font-family: cursive;
-  color: rgb(114, 114, 114);
+  border: 1px solid black;
+  width: 50%;
   cursor: pointer;
   text-decoration: none;
+  color: black;
   transition: 0.2s color ease-in;
 }
 .item .content h4:hover{
-  color: rgb(168, 0, 0);
+  color: white;
+  background-color: black;
 }
 
 .item .item-price {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .item .item-price strike {

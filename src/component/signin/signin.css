@@ -70,7 +70,9 @@
   border-radius: 25px;
 }
 .myform .btn {
+  margin:auto;
   height: 45px;
+  width: 60px;
   color: white;
   background-color: rgb(85, 1, 1);
   transition: 0.5s color ease-in-out;
