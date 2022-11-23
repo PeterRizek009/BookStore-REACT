@@ -1,6 +1,6 @@
 {
   "name": "booksapp",
-  "homepage" :"http://PeterRizek009.github.io/BookStore-REACT",
+  "homepage" :"http://PeterRizek009.github.io/BookStore",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

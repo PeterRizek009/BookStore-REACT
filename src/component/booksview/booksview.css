@@ -99,7 +99,7 @@ seemore-Btn span {
 @media (min-width: 1025px) and (max-width: 1200px) {
   .seemore-Btn {
     font-size: 12px;
-    margin: 0 0 10px 800px;
+    margin: 0 0 10px 600px;
   }
 }
 
@@ -110,7 +110,7 @@ seemore-Btn span {
   }
   .seemore-Btn {
     font-size: 13px;
-    margin: 0 0 10px 250px;
+    margin: 0 0 10px 100px;
   }
 }
 
