@@ -1,25 +1,31 @@
 import React from 'react'
 import './user.css'
-import { useState } from 'react';
+import { useNavigate } from "react-router"
 
+const User = ({ user , setUser}) => {
+    
 
-const User = ({ user }) => {
-    const [userClicked, setUserClicked] = useState(false);
+    let navigate = useNavigate();
 
-    const handleUserBtn = () => {
-        setUserClicked(true)
-    }
+    
+
+    const handleSignOut = () => {
+        setUser("");
+        navigate("/", { replace: true });
+    } 
     return (
-        <>
-            {userClicked === false ?
-                <button className='btn btn-outline-secondary mx-5 user-text' onclick={handleUserBtn}>
-                    {`Hi ${user}`}
+        <> 
+            <div className="dropdown">
+                <button type="button" className="btn btn-outline-danger  rounded-pill mx-5 dropdown-toggle" data-bs-toggle="dropdown">
+                {`Hi ${user}`}
                 </button>
-                : 
-                <button className='btn btn-outline-secondary mx-5 user-text'>
-                    Log out
+                <ul className="dropdown-menu py-4">
+                <button type="button" className="btn btn-dark mx-4 rounded-pill" onClick={handleSignOut}>
+                sign out
                 </button>
-            }
+                </ul>
+            </div>
+
 
 
         </>

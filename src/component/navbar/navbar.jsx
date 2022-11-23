@@ -6,7 +6,7 @@ import Books from "../db";
 import User from "../user/user";
 
 
-const Navbar = ({ user }) => {
+const Navbar = ({ user , setUser }) => {
 
   const [cartnum, setCartNum] = useState([])
   const [wishcount, setWishCount] = useState()
@@ -76,7 +76,7 @@ const Navbar = ({ user }) => {
             </NavLink>
               <div className="d-inline-flex">
               {user ? 
-                 <User user={user}/>
+                 <User user={user} setUser={setUser}/>
                : 
                <NavLink className="nav-icon position-relative text-decoration-none mx-5" to={'./signin'}>
               <i className="fa fa-fw fa-user text-dark mr-3" />

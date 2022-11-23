@@ -9,15 +9,6 @@
     color: red;
 }
 
-.usercontainer{
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    position: absolute;
-    margin-top: 20px;
-    z-index: 1000px;
-}
+
 
 

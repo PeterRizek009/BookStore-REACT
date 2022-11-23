@@ -132,7 +132,7 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <Navbar books={books} user={user} />
+      <Navbar books={books} user={user} setUser={setUser}/>
        
       <main>
         <Routes>

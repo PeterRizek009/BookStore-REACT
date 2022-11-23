@@ -84,7 +84,7 @@ return (
             </button>
 
             <div className="d-inline-flex mt-5">
-              <p className="text-muted m-2">Create new account</p>
+              <p className="text-muted p-3 m-2">Create new account</p>
               <button type="submit" className="btn rounded-pill">
                 Sign up
               </button>
