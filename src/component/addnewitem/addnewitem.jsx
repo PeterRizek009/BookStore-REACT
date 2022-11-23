@@ -63,7 +63,7 @@ const AddNewItem = ({ books, setBooks }) => {
             {alert ?
                 <Alert message={"Book added successfully!"} />
                 : null}
-            <div className="title my-3 mx-auto">
+            <div className="title my-3 text-center">
                 <h2>Add New<b>Book</b></h2>
             </div>
             <form className="editbooks" onSubmit={handleSubmit}>
@@ -105,7 +105,7 @@ const AddNewItem = ({ books, setBooks }) => {
                         className="form-control"
                     />
                 </div>
-                <div className='d-inline-flex'>
+                <div className="itemdata d-inline-flex">
                     <button type="submit" className="btn btn-danger px-5 mx-2 rounded-pill ">
                         Add
                     </button>

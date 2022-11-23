@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import "./header.css";
 
 const Header = () => {
@@ -8,7 +8,7 @@ const Header = () => {
         for (let i = 1; i < 4; i++) {
             items.push(
                 <div className={i === 1 ? 'carousel-item active' : 'carousel-item'} >
-                    <img id={`img${i}`} />
+                    <img id={`img${i}`} loading="lazy"/>
                     <div className="img-text">
                         <h2>
                             Alex <b> Book Store</b>

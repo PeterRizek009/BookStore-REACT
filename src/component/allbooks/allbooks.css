@@ -65,3 +65,12 @@ option {
 .shop-item-image:hover i {
   opacity: 1;
 }
+
+
+@media screen and (max-width: 480px)  {
+  .shop-items {
+    min-height: 6rem;
+    min-width: 8rem;
+  }
+  
+}

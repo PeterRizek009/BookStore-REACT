@@ -83,12 +83,12 @@ return (
               Sign in
             </button>
 
-            <div className="d-inline-flex mt-5">
+            {/* <div className="d-inline-flex mt-5">
               <p className="text-muted p-3 m-2">Create new account</p>
               <button type="submit" className="btn rounded-pill">
                 Sign up
               </button>
-            </div>
+            </div> */}
 
           </form>
         </div>

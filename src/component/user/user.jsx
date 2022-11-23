@@ -16,7 +16,7 @@ const User = ({ user , setUser}) => {
     return (
         <> 
             <div className="dropdown">
-                <button type="button" className="btn btn-outline-danger  rounded-pill mx-5 dropdown-toggle" data-bs-toggle="dropdown">
+                <button type="button" className="btn btn-outline-danger  rounded-pill ms-4 dropdown-toggle" data-bs-toggle="dropdown">
                 {`Hi ${user}`}
                 </button>
                 <ul className="dropdown-menu py-4">

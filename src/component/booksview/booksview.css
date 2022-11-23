@@ -53,11 +53,11 @@
 }
 
 .seemore-Btn {
-  font-size: 20px;
+  font-size: 14px;
   display: block;
   position: relative;
-  margin: 0 0 10px 1000px;
-  width: 220px;
+  margin: 10px 0 10px 1100px;
+  width: 150px;
   transition: 0.5s color ease-in-out;
 }
 .seemore-Btn:hover {
@@ -72,32 +72,45 @@ seemore-Btn span {
   text-decoration: none;
 }
 
-@media screen and (max-width: 992px) {
-  .most-books .sci-books {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 20px;
+@media (min-width: 481px) and (max-width: 768px) {
+  .most-books .book {
+    min-height: 6rem;
+    min-width: 8rem;
+   
   }
   .seemore-Btn {
     font-size: 12px;
-    margin: 0 0 10px 600px;
+    margin: 0 0 10px 300px;
   }
 }
-@media screen and (max-width: 1100px) {
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .most-books .book {
+    min-height: 8rem;
+    min-width: 10rem;
+   
+  }
   .seemore-Btn {
-    font-size: 13px;
+    font-size: 12px;
     margin: 0 0 10px 500px;
   }
 }
-@media (min-width: 300px) and (max-width: 700px) {
-  .Scicence-books .book img {
-    max-width: 90px;
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .seemore-Btn {
+    font-size: 12px;
+    margin: 0 0 10px 800px;
+  }
+}
+
+@media screen and (max-width: 480px)  {
+  .most-books .book {
+    min-height: 6rem;
+    min-width: 8rem;
   }
   .seemore-Btn {
     font-size: 13px;
-    margin: 0 0 10px 200px;
+    margin: 0 0 10px 300px;
   }
 }
 

@@ -112,7 +112,7 @@ const AllBooks = ({ books }) => {
         </section>
         <section className="module-large mx-auto">
             <div className="container">
-                <div className="row">
+                <div className="row mx-auto">
                     <div className="d-flex flex-start flex-wrap">
                         {selectedBooks.map((book) => (
                             <div className="shop-items m-1">
