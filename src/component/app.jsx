@@ -13,6 +13,7 @@ import AllBooks from "./allbooks/allbooks";
 import Wishlist from "./wishlist/wishilst";
 import Footer from "./footer/footer";
 import './app.css'
+import AboutUs from './aboutus/aboutus';
 
 const App = () => {
 
@@ -144,6 +145,10 @@ const App = () => {
           <Route
             path="/admin"
             element={<Admin/>}
+          />
+          <Route
+            path="/aboutus"
+            element={<AboutUs/>}
           />
            <Route
             path="/admin/edit"

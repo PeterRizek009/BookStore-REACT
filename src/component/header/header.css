@@ -87,7 +87,7 @@
 
 /* Books sections  */
 section {
-  padding-bottom: 10px;
+  padding-bottom: 2px;
 }
 
 /* novels */
@@ -107,7 +107,7 @@ section h2 b {
 
 section h2::after {
   content: "";
-  width: 100px;
+  width: 200px;
   position: absolute;
   margin: 0 auto;
   height: 4px;

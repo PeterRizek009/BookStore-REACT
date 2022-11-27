@@ -67,7 +67,7 @@ option {
 }
 
 
-@media screen and (max-width: 480px)  {
+@media screen and (max-width: 600px)  {
   .shop-items {
     min-height: 6rem;
     min-width: 8rem;

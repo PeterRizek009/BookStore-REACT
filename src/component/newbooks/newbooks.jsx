@@ -35,7 +35,7 @@ const NewBooks = ({ books }) => {
 
 return (
   <div>
-    <section className="books">
+    <section className="Newbooks">
       <div className="container" id="novels">
         <div className="row">
           <div className="col-md-12 mx-auto">

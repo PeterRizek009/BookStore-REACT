@@ -105,12 +105,12 @@ seemore-Btn span {
 
 @media screen and (max-width: 480px)  {
   .most-books .book {
-    min-height: 6rem;
-    min-width: 8rem;
+    max-height: 6rem;
+    max-width: 8rem;
   }
   .seemore-Btn {
     font-size: 13px;
-    margin: 0 0 10px 100px;
+    margin: 0 0 10px 190px;
   }
 }
 
