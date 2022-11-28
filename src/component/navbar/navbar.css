@@ -34,3 +34,15 @@
 .custom-toggler i:hover {
   transform: scale(1.1);
 }
+
+.notshow{
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: rgb(223, 218, 218);
+}

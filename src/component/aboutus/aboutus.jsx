@@ -17,7 +17,7 @@ const AboutUs = () => {
 
       </div>
     </div>
-    <div className="b-example-divider" />
+    
   </div>
   );
 }
