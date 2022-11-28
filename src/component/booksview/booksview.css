@@ -103,7 +103,7 @@ seemore-Btn span {
   }
 }
 
-@media screen and (max-width: 480px)  {
+@media screen and (min-width: 300px) and (max-width: 480px)  {
   .most-books .book {
     max-height: 6rem;
     max-width: 8rem;
