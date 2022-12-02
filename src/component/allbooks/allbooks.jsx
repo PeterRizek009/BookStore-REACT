@@ -115,7 +115,7 @@ const AllBooks = ({ books }) => {
                 <div className="row mx-auto">
                     <div className="d-flex flex-start flex-wrap">
                         {selectedBooks.map((book) => (
-                            <div className="shop-items m-1">
+                            <div className="shop-items col-sm-3 m-1">
                                 <div className="shop-item-image" key={book.id}>
                                     <Link to={`./bookdetails/${book.id}`}>
                                         <img src={images[(book.id)]} alt='book' loading='lazy' />

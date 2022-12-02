@@ -7,7 +7,6 @@ const BooksView = ({ books }) => {
   
     return (
         <section className="most-books">
-            <div className="b-example-divider" />
             <div className="container" id="Scicence">
                 <div className="row">
                     <div className="col-md-12">

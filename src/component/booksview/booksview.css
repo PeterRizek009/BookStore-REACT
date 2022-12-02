@@ -2,7 +2,7 @@
 .most-books {
   background-color: white;
 }
-.most-books .books {
+.most-books .books{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,9 +11,8 @@
   margin: 0 auto;
 }
 
-.most-books .book {
-  min-height: 16rem;
-  min-width: 14rem;
+.most-books  .books .book {
+  width: 17%;
   padding: 8px;
   margin: 10px;
   border: 0.5px solid #d2d2d2;
@@ -72,17 +71,7 @@ seemore-Btn span {
   text-decoration: none;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-  .most-books .book {
-    min-height: 6rem;
-    min-width: 8rem;
-   
-  }
-  .seemore-Btn {
-    font-size: 12px;
-    margin: 0 0 10px 300px;
-  }
-}
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .most-books .book {
@@ -103,14 +92,14 @@ seemore-Btn span {
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 480px)  {
-  .most-books .book {
-    max-height: 6rem;
-    max-width: 8rem;
+@media screen and (min-width: 300px) and (max-width: 600px)   {
+  .most-books  .books .book {
+    width: 40%;
+    margin-bottom: 5px;
   }
   .seemore-Btn {
     font-size: 13px;
-    margin: 0 0 10px 190px;
+    margin: 40px 0 10px 260px;
   }
 }
 
