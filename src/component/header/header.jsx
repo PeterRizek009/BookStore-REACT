@@ -8,7 +8,7 @@ const Header = () => {
         for (let i = 1; i < 4; i++) {
             items.push(
                 <div className={i === 1 ? 'carousel-item active' : 'carousel-item'} >
-                    <img id={`img${i}`} alt="pic"/>
+                    <img id={`img${i}`} alt=""/>
                     <div className="img-text">
                         <h2>
                             Alex <b> Book Store</b>
