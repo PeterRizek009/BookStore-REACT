@@ -26,7 +26,7 @@ option {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .shop-items {
   padding: 10px;
@@ -49,7 +49,6 @@ option {
 .shop-item-image {
   border: 1px solid gray;
   position: relative;
-  
   transition: 0.5 opacity ease-in-out;
 }
 
@@ -79,9 +78,13 @@ option {
 @media screen and (min-width: 300px) and (max-width: 600px)  {
   .shop-items {
     max-height: 20rem;
-    width: 30%;
-    margin: 2px;
+    width: 42%;
+    margin: 3px;
   }
   
+  .shop-item-image {
+    border: none;
+    width: 80%;
+  }
  
 }
