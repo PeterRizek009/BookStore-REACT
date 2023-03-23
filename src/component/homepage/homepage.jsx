@@ -4,7 +4,7 @@ import BooksView from '../booksview/booksview';
 import Header from './../header/header';
 
 
-const HomePage = ({books , onSave}) => {
+const HomePage = ({books }) => {
     return(
         <>
         <Header />  

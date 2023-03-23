@@ -113,9 +113,9 @@ const AllBooks = ({ books }) => {
         <section className="module-large mx-auto">
             <div className="container">
                 <div className="row mx-auto">
-                    <div className="d-flex flex-start flex-wrap">
+                    <div className="allItems">
                         {selectedBooks.map((book) => (
-                            <div className="shop-items col-sm-3 m-1">
+                            <div className="shop-items">
                                 <div className="shop-item-image" key={book.id}>
                                     <Link to={`./bookdetails/${book.id}`}>
                                         <img src={images[(book.id)]} alt='book' loading='lazy' />

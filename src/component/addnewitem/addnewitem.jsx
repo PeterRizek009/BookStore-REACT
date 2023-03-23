@@ -3,7 +3,7 @@ import "./addnewitem.css";
 import Books from '../db';
 import Alert from '../alert/alert';
 
-const AddNewItem = ({ books, setBooks }) => {
+const AddNewItem = () => {
 
 
 

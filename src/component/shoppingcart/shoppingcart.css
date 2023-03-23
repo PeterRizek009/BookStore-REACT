@@ -107,9 +107,9 @@ body {
   
 }
 
-@media (max-width: 700px) {
-     .card{
-      width: 200px
+@media screen and (min-width: 300px) and (max-width: 600px)  {
+     .tablecart{
+      width: 200px;
      }
 
      .align-middle{

@@ -18,24 +18,12 @@ import AboutUs from './aboutus/aboutus';
 const App = () => {
 
   const [books, setBooks] = useState([]);
-  const [user , setUser] = useState("");
-  // const getData = async () => {
-  //   await axios
-  //     .get(
-  //       `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/db`
-  //     )
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       setBooks(Books);
+  const [user, setUser] = useState("");
 
-  //     })
-  //     .catch((err) => console.log(err));
-  // };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setBooks(Books);
-     
     }, 1200);
     return () => clearTimeout(timeout)
   }, []);
@@ -45,51 +33,29 @@ const App = () => {
     //edit
     book.wishlist = true;
     setBooks([...books], books);
-    
   };
 
   const onCart = (book) => {
-    
     //edit
     book.isInCart = true;
     book.count++;
     setBooks([...books], books);
 
-   // handleSubmit(book);
+    // handleSubmit(book);
   };
 
-  // const handleSubmit = async (book) => {
-  //   //edit
-  //   try {
-  //     await axios.patch(
-  //       `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/` + book.id, book);
 
-  //   } catch (error) {
-  //     alert("Cannot change item data");
-  //   }
-
-  // };
 
   const handleRemoveItem = async (book) => {
     //clone
 
     //edit
-
-    if(book.wishlist === true){
+    if (book.wishlist === true) {
       book.wishlist = false;
     }
-    
     book.isInCart = false;
-    //const RemovedBook = [...books[index]];
     setBooks([...books], books);
-    // try {
-    //   await axios.patch(
-    //     `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/`+index,
-    //     RemovedBook
-    //   );
-    // } catch (error) {
-    //   alert("Cannot delete item from Cart");
-    // }
+
   };
 
   const handleDelete = async (book) => {
@@ -98,15 +64,7 @@ const App = () => {
     const newbooks = books.filter((p) => book.id !== p.id);
     //set state
     setBooks(newbooks);
-    // try {
-    //   await axios.delete(
-    //     `https://my-json-server.typicode.com/PeterRizek009/PeterRizek009-BookDB/Books/` +
-    //     books.id
-    //   );
-    // } catch (error) {
-    //   alert("Cannot delete item");
-    //   setBooks({ books: oldbooks });
-    // }
+
   };
 
   const handleIncrement = (book) => {
@@ -118,9 +76,6 @@ const App = () => {
   };
 
   const handleDecrement = (book) => {
-    console.log(book);
-    // const index = books.indexOf(book);
-    // books[index] = { ...books[index] };
     //edit
     if (book.count >= 1) {
       book.count--;
@@ -133,24 +88,24 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <Navbar books={books} user={user} setUser={setUser}/>
-       
+      <Navbar books={books} user={user} setUser={setUser} />
+
       <main>
         <Routes>
           <Route
             path="/"
             element={<HomePage onSave={onCart} books={books} />}
           />
-          <Route path="/signin" element={<SignIn  setUser={setUser}/>} />
+          <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route
             path="/admin"
-            element={<Admin/>}
+            element={<Admin />}
           />
           <Route
             path="/aboutus"
-            element={<AboutUs/>}
+            element={<AboutUs />}
           />
-           <Route
+          <Route
             path="/admin/edit"
             element={<Edit books={books} onDelete={handleDelete} />}
           />
@@ -160,24 +115,24 @@ const App = () => {
           />
           <Route
             path="/admin/addnewitem"
-            element={<AddNewItem books={books} setBooks={setBooks}/>}
+            element={<AddNewItem books={books} setBooks={setBooks} />}
           />
           <Route
             path="/bookdetails/:id"
             element={<BookDetails books={books} onSave={onCart} onWishlist={onWishlist} />}
           />
-          
+
           <Route
             path="allbooks/bookdetails/:id"
             element={<BookDetails books={books} onSave={onCart} onWishlist={onWishlist} />}
           />
-             <Route
+          <Route
             path="wishlist/bookdetails/:id"
             element={<BookDetails books={books} onSave={onCart} onWishlist={onWishlist} />}
           />
           <Route
             path="/wishlist"
-            element={<Wishlist  books={books} onDelete={handleRemoveItem} />}
+            element={<Wishlist books={books} onDelete={handleRemoveItem} />}
           />
           <Route
             path="/shoppingcart"
@@ -193,7 +148,7 @@ const App = () => {
           />
         </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </React.Fragment>
   );
 };

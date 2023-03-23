@@ -67,10 +67,11 @@
   font-size: 16px;
   color: #ffc000;
 }
-@media screen and (min-width: 300px) and (max-width: 600px)  {
+
+@media screen and (min-width: 300px) and (max-width: 800px)  {
   .item {
-    max-height: 22rem;
-    max-width: 14rem;
+    max-height: 24rem;
+    max-width: 10rem;
     margin:8px;
   }
   .item img {
