@@ -18,7 +18,7 @@ const SignIn = ({ setUser }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    users.users.map((user) => {
+     users.users.forEach((user) => {
       if (user.username === data.username && user.password === data.password) {
       setUser(data.username);
       if (user.role === "1") {
@@ -83,12 +83,6 @@ return (
               Sign in
             </button>
 
-            {/* <div className="d-inline-flex mt-5">
-              <p className="text-muted p-3 m-2">Create new account</p>
-              <button type="submit" className="btn rounded-pill">
-                Sign up
-              </button>
-            </div> */}
 
           </form>
         </div>
