@@ -1,6 +1,6 @@
 /* start of science  */
 .most-books {
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(231, 231, 231);
 }
 .most-books .books{
   display: flex;
@@ -30,7 +30,6 @@
 }
 
 .most-books .book img:hover {
-  opacity: 0.9;
   background-color: #161616;
 }
 
