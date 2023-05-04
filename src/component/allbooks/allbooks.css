@@ -80,4 +80,8 @@ option {
     margin: 2px;
    
   }
+
+  .shop-item-image {
+    width: 80%;
+  }
 }
