@@ -16,14 +16,14 @@
 #myCarousel .carousel-indicators button{
   cursor: pointer;
   background: #fff;
-  border-radius: 40px;
-  width: 22px;
-  height: 4px;
+  border-radius: 20px;
+  width: 20px;
+  height: 2px;
 }
 
 
 .carousel-item #img1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(./../../images/img1.jpg);
     background-size: cover;
 }
@@ -43,19 +43,18 @@
   position: absolute;
   display: flex;
   flex-flow: column wrap;
-  justify-content : flex-start;
+  justify-content : center;
   align-items: flex-start;
   z-index: 1;
   top: 0;
   margin-top: 180px;
-  margin-left: 180px;
+  margin-left: 50px;
 }
 
 .img-text p {
   color: #f5f5f5;
-  padding-bottom: 20px;
   width: 60%;
-  line-height: 0.9;
+  line-height: 1.2;
 }
 
 .img-text h2 {
@@ -65,7 +64,6 @@
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  margin: 20px 0 20px;
 }
 
 .img-text h2 b {
