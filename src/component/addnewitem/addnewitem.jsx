@@ -58,6 +58,9 @@ const AddNewItem = () => {
     const handleReset = (e) => {
         console.log(e.target.value);
     }
+
+
+    
     return (
         <React.Fragment>
             {alert ?

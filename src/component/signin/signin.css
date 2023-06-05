@@ -1,16 +1,11 @@
-.sign{
+.sign {
   display: block;
 }
 
-.closed{
+.closed {
   display: none;
 }
-.close-Btn {
-  display: block;
-  position: absolute;
-  right: 210px;
-  width: 40px;
-}
+
 
 .signIn {
   display: block;
@@ -42,7 +37,6 @@
   );
 }
 
-
 .myform {
   border-radius: 2px;
   background: whitesmoke;
@@ -63,18 +57,16 @@
   line-height: 1.5;
   color: #666;
   display: block;
-  width: 300px;
+  max-width: 300px;
   background: #e6e6e6;
   height: 50px;
   padding: 20px;
   border-radius: 25px;
 }
 .myform .btn {
-  margin:auto;
+  margin: auto;
   height: 45px;
   width: 60px;
-  color: white;
-  background-color: rgb(85, 1, 1);
   transition: 0.5s color ease-in-out;
 }
 
@@ -85,23 +77,16 @@
 
 @media screen and (max-width: 700px) {
   .signIn {
-    width: 80%;
-    height: auto;
+    width: 90%;
   }
-  .sign-box {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .close-Btn { 
-    right: 5px; 
+
+  .close-Btn {
+    right: 5px;
   }
   .myform {
     width: 100%;
   }
- 
 }
-
 
 @media screen and (min-width: 705px) and (max-width: 1000px) {
   .signIn {
@@ -111,16 +96,14 @@
   .close-Btn {
     right: 20px;
   }
-  
-} 
+}
 
- @media (min-width:1002px) and (max-width: 1200px) {
+@media (min-width: 1002px) and (max-width: 1200px) {
   .signIn {
     width: 80%;
     height: auto;
   }
   .close-Btn {
-    right:40px;
+    right: 40px;
   }
-  
 }

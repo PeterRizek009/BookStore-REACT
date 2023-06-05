@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import AddNewItem from "./addnewitem/addnewitem";
 import Admin from "./admin/admin";
@@ -17,16 +17,16 @@ import AboutUs from './aboutus/aboutus';
 
 const App = () => {
 
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState(Books);
   const [user, setUser] = useState("");
 
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setBooks(Books);
-    }, 1200);
-    return () => clearTimeout(timeout)
-  }, []);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setBooks(Books);
+  //   }, 1200);
+  //   return () => clearTimeout(timeout)
+  // }, []);
 
 
   const onWishlist = (book) => {

@@ -45,9 +45,7 @@ const handlecloseform = () => {
 
 return (
   <div className={closed ? "closed" : "sign"}>
-    <button className="close-Btn btn btn-danger" onClick={handlecloseform}>
-      <i className="fas fa-times"></i>
-    </button>
+    
     <section className="signIn">
       <div className="sign-box">
         <div className="myform">
@@ -79,8 +77,12 @@ return (
 
 
 
-            <button type="submit" className="btn  w-50 rounded-pill">
+            <button type="submit" className="btn  w-50 rounded-pill btn-danger">
               Sign in
+            </button>
+
+            <button type="button" className="btn  w-50 rounded-pill btn-danger mt-2" onClick={handlecloseform}>
+              Cancel 
             </button>
 
 
